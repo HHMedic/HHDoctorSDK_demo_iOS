@@ -24,10 +24,9 @@
 ## 1.概要介绍
 ## 2.集成方式
  HHDoctorSDK 提供两种集成方式：您既可以通过 CocoaPods 自动集成我们的 SDK，也可以通过手动下载 SDK, 然后添加到您的项目中。
-我们提供两个下载地址。分别为：
+我们提供的下载地址：
 
-- 官网 SDK [下载入口]()，需要下载完整版 iOS SDK。
-- 我们提供了 GitHub 发布仓库 [HHDoctorSDK]()。
+ 我们提供了发布仓库 [HHDoctorSDK](https://code.hh-medic.com/hh_public/HHDoctorSDK.ios)。
 
 由于呼叫视频需要相机相册权限，需要在info.plist中添加对应的权限，否则会导致无法调用。
 
@@ -42,8 +41,7 @@
 
 ### 2.1.手动集成
 
-1. 根据自己工程需要，下载对应版本的 HHMSDK，得到 NIMSDK.framework ，NIMAVChat.framework，NVS.framework，SecurityKit.framework 和 HHDoctorSDK.framework，以及未链接的全部三方依赖库 [^注1] ，将他们导入工程。
-[^注1]: 开发者应根据自身项目，将不冲突的依赖库添加进工程。
+1. 根据自己工程需要，下载对应版本的 HHMSDK，得到 NIMSDK.framework ，NIMAVChat.framework，NVS.framework，SecurityKit.framework 和 HHDoctorSDK.framework，以及未链接的全部三方依赖库 ，将他们导入工程。
 2. 添加其他 HHDoctorSDK 依赖库。
 
     - SystemConfiguration.framework
@@ -56,10 +54,9 @@
     - libz
     - libsqlite3.0
     - libc++
-3. 在 `Build Settings` -> `Other Linker Flags` 里，添加选项 `-ObjC`[^注2]。
+3. 在 `Build Settings` -> `Other Linker Flags` 里，添加选项 `-ObjC`。
 4. 在 `Build Settings` -> `Enable Bitcode 里，设置为 `No`。
 5. 如果需要在后台时保持音频通话状态，在 `Capabilities` -> `Background Modes` 里勾选 `audio, airplay, and Picture in Picture`。
-[^注2]: 如果使用 pod，可以在 pod 中进行配置。
 
 ### 2.2.自动集成
 * 在 `Podfile` 文件中加入
@@ -68,12 +65,11 @@
 use_frameworks!
 pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:hh_public/HHDoctorSDK.ios.git"
 ```
-* 安装 [^注3]
+* 安装
 
 ``` shell
 pod install
 ```
-[^注3]: 也可以通过 `pod update` 更新，更新缓慢可以添加参数 `--no-repo-update`。
 
 ### 2.3.调用规则
 所有 HHDoctorSDK 业务均通过 HHMSDK 单例调用
