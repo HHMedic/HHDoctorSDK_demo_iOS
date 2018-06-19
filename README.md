@@ -1,5 +1,11 @@
 # HHDoctorSDK 接入说明
 
+<p align="right">
+北京和缓医疗科技有限公司<br/>
+网址：https://www.hh-medic.com <br/>
+地址：北京市东城区东直门来福士7层
+</p>
+
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [1. 概要介绍](#1-概要介绍)
       * [2. 集成方式](#2-集成方式)
