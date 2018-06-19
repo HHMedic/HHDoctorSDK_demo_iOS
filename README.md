@@ -1,7 +1,22 @@
 # HHDoctorSDK 接入说明
-[TOC]
-## 1. 概要介绍
-## 2. 集成方式
+
+   * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
+      * [1. 概要介绍](#1-概要介绍)
+      * [2. 集成方式](#2-集成方式)
+         * [2.1. 手动集成](#21-手动集成)
+         * [2.2. 自动集成](#22-自动集成)
+         * [2.3. 调用规则](#23-调用规则)
+      * [3. 初始化](#3-初始化)
+      * [4. 登录账户](#4-登录账户)
+         * [4.1. 登录](#41-登录)
+         * [4.2. 登出](#42-登出)
+      * [5. 视频呼叫](#5-视频呼叫)
+      * [6. 代理(delegate)(可选)](#6-代理delegate可选)
+         * [6.1. 加入](#61-加入)
+         * [6.2. 移除](#62-移除)
+         
+## 1.概要介绍
+## 2.集成方式
  HHDoctorSDK 提供两种集成方式：您既可以通过 CocoaPods 自动集成我们的 SDK，也可以通过手动下载 SDK, 然后添加到您的项目中。
 我们提供两个下载地址。分别为：
 
@@ -19,7 +34,7 @@
 <string>应用需使用麦克风权限，以便您向医生进行视频咨询。</string>
 ```
 
-### 2.1. 手动集成
+### 2.1.手动集成
 
 1. 根据自己工程需要，下载对应版本的 HHMSDK，得到 NIMSDK.framework ，NIMAVChat.framework，NVS.framework，SecurityKit.framework 和 HHDoctorSDK.framework，以及未链接的全部三方依赖库 [^注1] ，将他们导入工程。
 [^注1]: 开发者应根据自身项目，将不冲突的依赖库添加进工程。
@@ -40,7 +55,7 @@
 5. 如果需要在后台时保持音频通话状态，在 `Capabilities` -> `Background Modes` 里勾选 `audio, airplay, and Picture in Picture`。
 [^注2]: 如果使用 pod，可以在 pod 中进行配置。
 
-### 2.2. 自动集成
+### 2.2.自动集成
 * 在 `Podfile` 文件中加入
 
 ```shell
@@ -54,7 +69,7 @@ pod install
 ```
 [^注3]: 也可以通过 `pod update` 更新，更新缓慢可以添加参数 `--no-repo-update`。
 
-### 2.3. 调用规则
+### 2.3.调用规则
 所有 HHDoctorSDK 业务均通过 HHMSDK 单例调用
 
 ```swift
@@ -64,7 +79,7 @@ public class HHMSDK : NSObject {
 }
 ```
 
-## 3. 初始化
+## 3.初始化
 在使用 HHDoctorSDK 任何方法之前，都应该首先调用初始化方法。正常业务情况下，初始化方法有仅只应调用一次。
 
 HHSDKOptions 选项参数列表
@@ -169,7 +184,7 @@ HHCallType 枚举列表
 child | 儿童
 adult | 成人
 
-## 6. 代理(delegate)
+## 6. 代理(delegate)(可选)
 代理主要用于视频过程中的状态反馈。如果不需要状态反馈，可以不考虑该代理。
 所有的代理方法都是可选的，可以根据自己的实际需要实现不同的代理方法。
 
@@ -230,8 +245,6 @@ HHMSDK.default.add(delegate: self)
 HHMSDK.default.remove(delegate: self)
 ```
 
-## 7. 操作日志
-视频过程中的操作会以文件的形式存储在应用沙盒中，方便在出现 bug 定位问题。
 
 
 
