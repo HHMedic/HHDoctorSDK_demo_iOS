@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         /// 初始化
-        let option = HHSDKOptions(isDebug: true, isDevelop: true)
+        let option = HHSDKOptions(productId: "3000" ,isDebug: true, isDevelop: true)
         option.cerName = "2cDevTest"
         HHMSDK.default.start(option: option)
         
