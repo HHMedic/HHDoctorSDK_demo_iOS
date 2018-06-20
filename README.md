@@ -9,7 +9,7 @@
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [1. 集成方式](#1-集成方式)
          * [1.1. 手动集成](#11-手动集成)
-         * [1.2. 自动集成](#12-自动集成)
+         * [1.2. 自动集成（推荐）](#12-自动集成（推荐）)
          * [1.3. 调用规则](#13-调用规则)
       * [2. 初始化](#2-初始化)
       * [3. 登录账户](#3-登录账户)
@@ -55,10 +55,10 @@
     - libsqlite3.0
     - libc++
 3. 在 `Build Settings` -> `Other Linker Flags` 里，添加选项 `-ObjC`。
-4. 在 `Build Settings` -> `Enable Bitcode 里，设置为 `No`。
+4. 在 `Build Settings` -> `Enable Bitcode` 里，设置为 `No`。
 5. 如果需要在后台时保持音频通话状态，在 `Capabilities` -> `Background Modes` 里勾选 `audio, airplay, and Picture in Picture`。
 
-### 1.2. 自动集成
+### 1.2. 自动集成（推荐）
 * 在 `Podfile` 文件中加入
 
 ```shell
