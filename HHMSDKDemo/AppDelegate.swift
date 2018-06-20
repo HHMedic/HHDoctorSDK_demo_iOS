@@ -18,10 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /// 初始化
         let option = HHSDKOptions(isDebug: true, isDevelop: true)
+        option.cerName = "2cDevTest"
         HHMSDK.default.start(option: option)
-
         
         return true
+    }
+    
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        HHMSDK.default.updateAPNS(token: deviceToken)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
