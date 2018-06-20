@@ -90,6 +90,7 @@ HHSDKOptions 选项参数列表
 ------|---|--------
 isDevelopment|Bool|服务器模式（测试/正式）
 isDebug|Bool|调试模式(是否打印日志)
+APNs|String |推送证书名（由和缓生成）
 hudManager| HHHUDable|自定义 progressHUD
 hudDisTime| Double|hud 自动消失时间
 
@@ -97,11 +98,22 @@ hudDisTime| Double|hud 自动消失时间
 
 ```swift
 let option = HHSDKOptions(isDebug: true, isDevelop: true)
+option.cerName = "2cDevTest"
 // let option = HHSDKOptions()
 // option.isDevelopment = true
 // option.isDebug = true
 // option.hudDisTime = 2
 HHMSDK.default.start(option: option)
+```
+
+- APNs 配置
+
+在 appDelegate 中向 SDK 传入 deviceToken 即可。
+
+```swift
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    HHMSDK.default.updateAPNS(token: deviceToken)
+}
 ```
 
 ## 3. 登录账户
