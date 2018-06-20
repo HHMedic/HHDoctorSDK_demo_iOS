@@ -7,26 +7,26 @@
 </p>
 
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
-      * [1. 概要介绍](#1-概要介绍)
-      * [2. 集成方式](#2-集成方式)
-         * [2.1. 手动集成](#21-手动集成)
-         * [2.2. 自动集成](#22-自动集成)
-         * [2.3. 调用规则](#23-调用规则)
-      * [3. 初始化](#3-初始化)
-      * [4. 登录账户](#4-登录账户)
-         * [4.1. 登录](#41-登录)
-         * [4.2. 登出](#42-登出)
-      * [5. 视频呼叫](#5-视频呼叫)
-      * [6. 代理(delegate)(可选)](#6-代理delegate可选)
-         * [6.1. 加入](#61-加入)
-         * [6.2. 移除](#62-移除)
+      * [1. 集成方式](#1-集成方式)
+         * [1.1. 手动集成](#11-手动集成)
+         * [1.2. 自动集成](#12-自动集成)
+         * [1.3. 调用规则](#13-调用规则)
+      * [2. 初始化](#2-初始化)
+      * [3. 登录账户](#3-登录账户)
+         * [3.1. 登录](#31-登录)
+         * [3.2. 登出](#32-登出)
+      * [4. 视频呼叫](#4-视频呼叫)
+      * [5. 代理(delegate)(可选)](#5-代理delegate可选)
+         * [5.1. 加入](#51-加入)
+         * [5.2. 移除](#52-移除)
          
-## 1.概要介绍
-## 2.集成方式
+
+## 1. 集成方式
  HHDoctorSDK 提供两种集成方式：您既可以通过 CocoaPods 自动集成我们的 SDK，也可以通过手动下载 SDK, 然后添加到您的项目中。
 我们提供的下载地址：
 
- 我们提供了发布仓库 [HHDoctorSDK](https://code.hh-medic.com/hh_public/HHDoctorSDK.ios)。
+ 我们提供了发布仓库: [HHDoctorSDK](https://code.hh-medic.com/hh_public/HHDoctorSDK.ios)。
+ 集成demo地址: [HHDoctorSDK_demo_iOS](https://github.com/HHMedic/HHDoctorSDK_demo_iOS)
 
 由于呼叫视频需要相机相册权限，需要在info.plist中添加对应的权限，否则会导致无法调用。
 
@@ -39,7 +39,7 @@
 <string>应用需使用麦克风权限，以便您向医生进行视频咨询。</string>
 ```
 
-### 2.1.手动集成
+### 1.1. 手动集成
 
 1. 根据自己工程需要，下载对应版本的 HHMSDK，得到 NIMSDK.framework ，NIMAVChat.framework，NVS.framework，SecurityKit.framework 和 HHDoctorSDK.framework，以及未链接的全部三方依赖库 ，将他们导入工程。
 2. 添加其他 HHDoctorSDK 依赖库。
@@ -58,7 +58,7 @@
 4. 在 `Build Settings` -> `Enable Bitcode 里，设置为 `No`。
 5. 如果需要在后台时保持音频通话状态，在 `Capabilities` -> `Background Modes` 里勾选 `audio, airplay, and Picture in Picture`。
 
-### 2.2.自动集成
+### 1.2. 自动集成
 * 在 `Podfile` 文件中加入
 
 ```shell
@@ -71,7 +71,7 @@ pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:hh_public/HHDoctorSDK.ios.git"
 pod install
 ```
 
-### 2.3.调用规则
+### 1.3. 调用规则
 所有 HHDoctorSDK 业务均通过 HHMSDK 单例调用
 
 ```swift
@@ -81,7 +81,7 @@ public class HHMSDK : NSObject {
 }
 ```
 
-## 3.初始化
+## 2. 初始化
 在使用 HHDoctorSDK 任何方法之前，都应该首先调用初始化方法。正常业务情况下，初始化方法有仅只应调用一次。
 
 HHSDKOptions 选项参数列表
@@ -104,9 +104,9 @@ let option = HHSDKOptions(isDebug: true, isDevelop: true)
 HHMSDK.default.start(option: option)
 ```
 
-## 4. 登录账户
+## 3. 登录账户
 在对医生视频呼叫之前，需要先登录账号信息。账号的 uuid 由和缓提供。
-### 4.1. 登录
+### 3.1. 登录
 
 * 原型
 
@@ -134,7 +134,7 @@ HHMSDK.default.login(uuid: 100001531) { (error) in
 ```
 error 为登录错误信息，成功则为 nil。
 
-### 4.2. 登出
+### 3.2. 登出
 应用层登出/注销/切换自己的账号时需要调用 HHMSDK 的登出操作，该操作会通知和缓服务器进行 APNs 推送信息的解绑操作，避免用户已登出但推送依然发送到当前设备的情况发生。
 
 * 原型
@@ -154,7 +154,7 @@ public class HHMSDK : NSObject {
 HHMSDK.default.logout()
 ```
 
-## 5. 视频呼叫
+## 4. 视频呼叫
 根据实际场景的不同，可以进行成人、儿童方向的向医生咨询。
 
 * 原型
@@ -186,7 +186,7 @@ HHCallType 枚举列表
 child | 儿童
 adult | 成人
 
-## 6. 代理(delegate)(可选)
+## 5. 代理(delegate)(可选)
 代理主要用于视频过程中的状态反馈。如果不需要状态反馈，可以不考虑该代理。
 所有的代理方法都是可选的，可以根据自己的实际需要实现不同的代理方法。
 
@@ -234,14 +234,14 @@ public protocol HHMVideoDelegate : NSObjectProtocol {
 }
 ```
 
-### 6.1. 加入
+### 5.1. 加入
 代理支持同时设置多个。
 
 ```swift
 HHMSDK.default.add(delegate: self)
 ```
 
-### 6.2. 移除
+### 5.2. 移除
 
 ```swift
 HHMSDK.default.remove(delegate: self)
