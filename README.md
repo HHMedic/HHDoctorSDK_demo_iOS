@@ -19,6 +19,7 @@
       * [5. 代理(delegate)(可选)](#5-代理delegate可选)
          * [5.1. 加入](#51-加入)
          * [5.2. 移除](#52-移除)
+      * [6. demo 使用说明](#6-demo-使用说明)
          
 
 ## 1. 集成方式
@@ -260,6 +261,7 @@ HHMSDK.default.add(delegate: self)
 HHMSDK.default.remove(delegate: self)
 ```
 
-
+## 6. demo 使用说明
+由于使用 [cocoapod](https://cocoapods.org) 管理第三方库, 运行 demo 前需要通过 ```pod update``` 更新第三方库才能运行。
 
 
