@@ -3,7 +3,7 @@
 
 target 'HHMSDKDemo' do
   use_frameworks!
-  pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:hh_public/HHDoctorSDK.ios.git"
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git"
 end
 
 
