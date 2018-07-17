@@ -409,7 +409,7 @@
 				DEVELOPMENT_TEAM = SX7LU85BSD;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HHMSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +431,7 @@
 				DEVELOPMENT_TEAM = SX7LU85BSD;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HHMSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -28,8 +28,6 @@ class CallDelegateVC: UIViewController {
         HHMSDK.default.startCall(.adult)
     }
     
-    
-
     deinit {
         HHMSDK.default.remove(delegate: self)
     }
@@ -38,6 +36,9 @@ class CallDelegateVC: UIViewController {
 
 
 extension CallDelegateVC: HHMVideoDelegate {
+    func onExtensionDoctor() {
+        print("转呼医生")
+    }
     
     func callDidEstablish() {
         print("通话已接通")

@@ -19,7 +19,6 @@
       * [5. 代理(delegate)(可选)](#5-代理delegate可选)
          * [5.1. 加入](#51-加入)
          * [5.2. 移除](#52-移除)
-      * [6. demo 使用说明](#6-demo-使用说明)
          
 
 ## 1. 集成方式
@@ -118,9 +117,13 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
+*注意：需要上传 APNs 的 p12 文件，请联系我们上传。*
+
 ## 3. 登录账户
 在对医生视频呼叫之前，需要先登录账号信息。账号的 uuid 由和缓提供。
 ### 3.1. 登录
+
+*注意: 不能多次调用登录 SDK，否则会导致视频故障。*
 
 * 原型
 
@@ -261,58 +264,6 @@ HHMSDK.default.add(delegate: self)
 HHMSDK.default.remove(delegate: self)
 ```
 
-## 6. demo 使用说明
-由于使用 [cocoapod](https://cocoapods.org) 管理第三方库, 运行 demo 前需要通过 ```pod update``` 更新第三方库才能运行。
 
-```shell
-# 1. 切换到 demo 目录（该目录下有 pofile 文件）
-cd HHDoctorSDK_demo_iOS
-# 更新库
-pod update
-```
 
-说明： demo 目录文件如下：
 
-```
-.
-├── HHMSDKDemo
-│   ├── AppDelegate.swift
-│   ├── Assets.xcassets
-│   │   ├── AppIcon.appiconset
-│   │   │   └── Contents.json
-│   │   └── Contents.json
-│   ├── Base.lproj
-│   │   ├── LaunchScreen.storyboard
-│   │   └── Main.storyboard
-│   ├── CallDelegateVC.swift
-│   ├── HHMSDKDemo.entitlements
-│   ├── Info.plist
-│   ├── LoginVC.swift
-│   ├── NormalCallVC.swift
-│   ├── ScreenListVC.swift
-│   └── Utils
-│       └── UIView+xib.swift
-├── HHMSDKDemo.xcodeproj
-│   ├── project.pbxproj
-│   ├── project.xcworkspace
-│   │   ├── contents.xcworkspacedata
-│   │   ├── xcshareddata
-│   │   │   └── IDEWorkspaceChecks.plist
-│   │   └── xcuserdata
-│   │       └── shijian.xcuserdatad
-│   │           └── UserInterfaceState.xcuserstate
-│   └── xcuserdata
-│       └── shijian.xcuserdatad
-│           └── xcschemes
-│               └── xcschememanagement.plist
-├── HHMSDKDemo.xcworkspace
-│   ├── contents.xcworkspacedata
-│   ├── xcshareddata
-│   │   └── IDEWorkspaceChecks.plist
-│   └── xcuserdata
-│       └── shijian.xcuserdatad
-│           └── UserInterfaceState.xcuserstate
-├── LICENSE
-├── Podfile
-......
-```
