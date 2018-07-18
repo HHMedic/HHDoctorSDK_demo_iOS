@@ -107,26 +107,6 @@ option.cerName = "2cDevTest"
 HHMSDK.default.start(option: option)
 ```
 
-- APNs 配置
-
-在 appDelegate 中向 SDK 传入 deviceToken 即可。
-
-```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    HHMSDK.default.updateAPNS(token: deviceToken)
-}
-```
-
-*注意：需要上传 APNs 的 p12 文件，请联系我们上传。*
-
-- 其他配置
-
-为了支持用户压后台后音视频的正常使用，需要设置 Background Modes。具体设置如下：
-
-```
-xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
-```
-
 
 ## 3. 登录账户
 在对医生视频呼叫之前，需要先登录账号信息。账号的 uuid 由和缓提供。
@@ -274,5 +254,25 @@ HHMSDK.default.remove(delegate: self)
 ```
 
 
+## 6. 其他配置
 
+### 6.1. APNs
+
+在 appDelegate 中向 SDK 传入 deviceToken 即可。
+
+```swift
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    HHMSDK.default.updateAPNS(token: deviceToken)
+}
+```
+
+*注意：需要上传 APNs 的 p12 文件，请联系我们上传。*
+
+### 6.2. Background Modes
+
+为了支持用户压后台后音视频的正常使用，需要设置 Background Modes。具体设置如下：
+
+```
+xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
+```
 
