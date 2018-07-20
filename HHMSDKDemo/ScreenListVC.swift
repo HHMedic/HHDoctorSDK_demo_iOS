@@ -23,5 +23,10 @@ class ScreenListVC: UITableViewController {
         }
         
     }
+    
+    @IBAction func clearBadge(_ sender: UIBarButtonItem) {
+        let badge = HHMSDK.default.markRead()
+        UIApplication.shared.applicationIconBadgeNumber -= badge
+    }
 
 }

@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
 
     @IBAction func doLogin(_ sender: UIButton) {
         // 登录
-        HHMSDK.default.login(uuid: 100001531) { [weak self] in
+        HHMSDK.default.login(uuid: 100000470) { [weak self] in
             if let aError = $0 {
                 print("登录错误: " + aError.localizedDescription)
             } else {
@@ -25,6 +25,8 @@ class LoginVC: UIViewController {
             }
         }
     }
+    
+    
     
     func jump2main() {
         performSegue(withIdentifier: "mainScreen", sender: self)

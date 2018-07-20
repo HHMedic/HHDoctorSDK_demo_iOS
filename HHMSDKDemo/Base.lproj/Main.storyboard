@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,6 +71,11 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="选择功能" id="4yA-pt-Rni">
+                        <barButtonItem key="leftBarButtonItem" title="clear badge" id="e9h-lt-Q6F">
+                            <connections>
+                                <action selector="clearBadge:" destination="t0i-uz-Bly" id="lYS-9Z-CGH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="退出登录" id="4RM-f4-f9F">
                             <connections>
                                 <action selector="doExit:" destination="t0i-uz-Bly" id="hu5-H4-Agf"/>
