@@ -65,7 +65,7 @@ extension CallDelegateVC: HHMVideoDelegate {
         print("对方'" + status + "'视频")
     }
     
-    func onReceive(_ callID: String, from: String) {
+    func onReceive(_ callID: String) {
         print("收到医生呼叫")
     }
     
