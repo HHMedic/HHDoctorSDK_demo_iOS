@@ -26,6 +26,10 @@
 	<string>应用需使用麦克风权限，以便您向医生进行视频咨询。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>应用需要使用相册权限，以便您向医生发送健康资料。</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

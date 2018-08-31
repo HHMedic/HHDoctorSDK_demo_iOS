@@ -3,7 +3,7 @@ platform :ios, '9.0'
 
 target 'HHMSDKDemo' do
   use_frameworks!
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => "feature/release"
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git"
 end
 
 
