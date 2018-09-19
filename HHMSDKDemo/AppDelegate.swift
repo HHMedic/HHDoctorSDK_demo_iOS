@@ -14,16 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         registerNotification()
         
         /// 初始化
         let option = HHSDKOptions(productId: "3000" ,isDebug: true, isDevelop: true)
         option.cerName = "2cDevTest"
         HHMSDK.default.start(option: option)
-
-        return true
     }
     
     func registerNotification() {
