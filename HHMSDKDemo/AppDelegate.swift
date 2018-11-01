@@ -10,8 +10,8 @@ import UIKit
 import HHDoctorSDK
 
 
-public var testUUId = 100000470
-public var testMedicId = "1533808648331"
+public var testUUId = 100002514
+public var testMedicId = "1541041785333"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
