@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6AF58710F6F4704A0DDB54DA /* Pods_HHMSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B48E4568EBC28B3ABE21F02 /* Pods_HHMSDKDemo.framework */; };
 		95844E312153A4E800D836F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95844E302153A4E800D836F1 /* CoreMotion.framework */; };
+		95CAF0C2218AE4A400755F22 /* WebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAF0C1218AE4A400755F22 /* WebBrowser.swift */; };
 		95CC5FD020D8A64100310344 /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC5FCF20D8A64100310344 /* UIView+xib.swift */; };
 		95F31C4120D0F8C9000BDAC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F31C4020D0F8C9000BDAC4 /* AppDelegate.swift */; };
 		95F31C4320D0F8C9000BDAC4 /* NormalCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F31C4220D0F8C9000BDAC4 /* NormalCallVC.swift */; };
@@ -25,6 +26,7 @@
 		17CA3CCBE1A55DDD5C3CA3C4 /* Pods-HHMSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHMSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHMSDKDemo/Pods-HHMSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4D6DB950D99E74522E220E53 /* Pods-HHMSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHMSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHMSDKDemo/Pods-HHMSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		95844E302153A4E800D836F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		95CAF0C1218AE4A400755F22 /* WebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowser.swift; sourceTree = "<group>"; };
 		95CC5FCF20D8A64100310344 /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
 		95E3293120D9F76A003906D4 /* HHMSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HHMSDKDemo.entitlements; sourceTree = "<group>"; };
 		95F31C3D20D0F8C9000BDAC4 /* HHMSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHMSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 		95CC5FCE20D8A5FB00310344 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				95CAF0C1218AE4A400755F22 /* WebBrowser.swift */,
 				95F3B0B720FF2ABF00DAC928 /* calling.mp3 */,
 				95CC5FCF20D8A64100310344 /* UIView+xib.swift */,
 			);
@@ -208,6 +211,7 @@
 				"${PODS_ROOT}/HHDoctorSDK/HHDoctorSDK/NIMAVChat.framework",
 				"${PODS_ROOT}/HHDoctorSDK/HHDoctorSDK/NIMSDK.framework",
 				"${PODS_ROOT}/HHDoctorSDK/HHDoctorSDK/NVS.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -215,6 +219,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMAVChat.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -272,6 +277,7 @@
 				95F31C5520D24789000BDAC4 /* LoginVC.swift in Sources */,
 				95F31C5720D2485A000BDAC4 /* ScreenListVC.swift in Sources */,
 				95F31C5320D20981000BDAC4 /* CallDelegateVC.swift in Sources */,
+				95CAF0C2218AE4A400755F22 /* WebBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,19 +427,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HHMSDKDemo/HHMSDKDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX7LU85BSD;
+				DEVELOPMENT_TEAM = 29X7GPV9P6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HHMSDKDemo/Utils/IOS",
 				);
 				INFOPLIST_FILE = HHMSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.patient-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.hhdemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -450,19 +456,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HHMSDKDemo/HHMSDKDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX7LU85BSD;
+				DEVELOPMENT_TEAM = 29X7GPV9P6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HHMSDKDemo/Utils/IOS",
 				);
 				INFOPLIST_FILE = HHMSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.patient-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.hhdemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

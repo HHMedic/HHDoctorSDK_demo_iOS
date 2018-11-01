@@ -3,7 +3,8 @@ platform :ios, '9.0'
 
 target 'HHMSDKDemo' do
   use_frameworks!
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid_pro'
+  pod 'SnapKit'
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
 end
 
 

@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
 
     @IBAction func doLogin(_ sender: UIButton) {
         // 登录
-        HHMSDK.default.login(uuid: 100000470) { [weak self] in
+        HHMSDK.default.login(uuid: testUUId) { [weak self] in
             if let aError = $0 {
                 print("登录错误: " + aError.localizedDescription)
             } else {

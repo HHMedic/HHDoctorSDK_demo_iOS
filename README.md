@@ -17,17 +17,25 @@
          * [3.1. 登录](#31-登录)
          * [3.2. 登出](#32-登出)
       * [4. 视频呼叫](#4-视频呼叫)
-      * [5. 代理(delegate)(可选)](#5-代理delegate可选)
-         * [5.1. 加入](#51-加入)
-         * [5.2. 移除](#52-移除)
-      * [6. 其他配置](#6-其他配置)
-         * [6.1. APNs](#61-apns)
-         * [6.2. Background Modes](#62-background-modes)
+      * [5. 病历接口](#5-病历接口)
+      * [6. 代理(delegate)(可选)](#5-代理delegate可选)
+         * [6.1. 加入](#51-加入)
+         * [6.2. 移除](#52-移除)
+      
+      * [7. 其他配置](#6-其他配置)
+         * [7.1. APNs](#61-apns)
+         * [7.2. Background Modes](#62-background-modes)
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [swift 4.1](#swift-41)
          
 ##  0. 更新日志
+
+> 2.0.6
+
+- 增加病历列表和病历详情接口
+- 删除UTDID.framework
+- iOS 最低版本支持到iOS 8.0
 
 > 2.0.2
 
@@ -207,7 +215,34 @@ HHCallType 枚举列表
 child | 儿童
 adult | 成人
 
-## 5. 代理(delegate)(可选)
+
+## 5. 病历接口
+
+病历列表
+
+```
+/// 获取病历列表
+///
+/// - Parameter memberUuid: 当前人的uuid
+/// - Returns: url
+@objc public func getMedicList(memberUuid: Int) -> String {
+}
+```
+
+病历详情
+
+```
+    /// 获取病历详情
+    ///
+    /// - Parameters:
+    ///   - memberUuid: 当前人的uuid
+    ///   - medicId: 病历id
+    /// - Returns: url
+    @objc public func getMedicDetail(memberUuid: Int, medicId: String) -> String {
+    }
+```
+
+## 6. 代理(delegate)(可选)
 代理主要用于视频过程中的状态反馈。如果不需要状态反馈，可以不考虑该代理。
 所有的代理方法都是可选的，可以根据自己的实际需要实现不同的代理方法。
 
@@ -255,23 +290,23 @@ public protocol HHMVideoDelegate : NSObjectProtocol {
 }
 ```
 
-### 5.1. 加入
+### 6.1. 加入
 代理支持同时设置多个。
 
 ```swift
 HHMSDK.default.add(delegate: self)
 ```
 
-### 5.2. 移除
+### 6.2. 移除
 
 ```swift
 HHMSDK.default.remove(delegate: self)
 ```
 
 
-## 6. 其他配置
+## 7. 其他配置
 
-### 6.1. APNs
+### 7.1. APNs
 
 在 appDelegate 中向 SDK 传入 deviceToken 即可。
 
@@ -283,7 +318,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 *注意：需要上传 APNs 的 p12 文件，请联系我们上传。*
 
-### 6.2. Background Modes
+### 7.2. Background Modes
 
 为了支持用户压后台后音视频的正常使用，需要设置 Background Modes。具体设置如下：
 
