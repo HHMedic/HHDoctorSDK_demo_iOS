@@ -154,7 +154,7 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
     
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
     {
-        print("start")
+//        print("start")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {

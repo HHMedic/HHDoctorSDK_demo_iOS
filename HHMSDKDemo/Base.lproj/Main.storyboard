@@ -175,13 +175,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gd-PI-lxi">
-                                <rect key="frame" x="45" y="164" width="285" height="34"/>
+                                <rect key="frame" x="45" y="164" width="285" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-i3-JxQ">
-                                        <rect key="frame" x="10" y="0.0" width="120" height="34"/>
+                                        <rect key="frame" x="10" y="0.0" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.50980392159999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="428-w6-YJp"/>
+                                            <constraint firstAttribute="height" constant="40" id="pDb-Zn-fZ4"/>
                                         </constraints>
                                         <state key="normal" title="儿童"/>
                                         <userDefinedRuntimeAttributes>
@@ -194,7 +195,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-Ef-iOf">
-                                        <rect key="frame" x="155" y="0.0" width="120" height="34"/>
+                                        <rect key="frame" x="155" y="0.0" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.50980392159999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="成人"/>
                                         <userDefinedRuntimeAttributes>
@@ -210,6 +211,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PcZ-Ef-iOf" firstAttribute="leading" secondItem="cKb-i3-JxQ" secondAttribute="trailing" constant="25" id="9VM-cK-7Aa"/>
+                                    <constraint firstItem="PcZ-Ef-iOf" firstAttribute="height" secondItem="cKb-i3-JxQ" secondAttribute="height" id="DB5-3w-B0S"/>
                                     <constraint firstAttribute="trailing" secondItem="PcZ-Ef-iOf" secondAttribute="trailing" constant="10" id="M2j-9c-nRg"/>
                                     <constraint firstItem="cKb-i3-JxQ" firstAttribute="leading" secondItem="4Gd-PI-lxi" secondAttribute="leading" constant="10" id="UMN-fN-joq"/>
                                     <constraint firstItem="cKb-i3-JxQ" firstAttribute="top" secondItem="4Gd-PI-lxi" secondAttribute="top" id="VQK-dg-fIF"/>
@@ -243,13 +245,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTp-yS-jeG">
-                                <rect key="frame" x="45" y="483" width="285" height="34"/>
+                                <rect key="frame" x="45" y="477" width="285" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iae-tc-tmZ">
-                                        <rect key="frame" x="10" y="0.0" width="120" height="34"/>
+                                        <rect key="frame" x="10" y="0.0" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.50980392159999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="IRK-aK-pM6"/>
+                                            <constraint firstAttribute="height" constant="40" id="s5T-lo-zmD"/>
                                         </constraints>
                                         <state key="normal" title="儿童"/>
                                         <userDefinedRuntimeAttributes>
@@ -263,8 +266,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-AB-SPw">
-                                        <rect key="frame" x="155" y="0.0" width="120" height="34"/>
+                                        <rect key="frame" x="155" y="0.0" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.50980392159999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3ML-FG-VrT"/>
+                                        </constraints>
                                         <state key="normal" title="成人"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -331,9 +337,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-pY-iKv">
-                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
-                                <state key="normal" title="登录"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-pY-iKv">
+                                <rect key="frame" x="150" y="313.5" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="2np-9q-LB5"/>
+                                    <constraint firstAttribute="height" constant="40" id="HjA-2l-23H"/>
+                                </constraints>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doLogin:" destination="cO3-cq-YaO" eventType="touchUpInside" id="m9O-G0-tvU"/>
                                 </connections>

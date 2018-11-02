@@ -221,25 +221,27 @@ adult | 成人
 病历列表
 
 * 说明: 病历相关接口只返回URL, 由用户自己实现webView加载。
+* 参数: userToken, 由服务端对接产生
+
 ```
 /// 获取病历列表
 ///
-/// - Parameter memberUuid: 当前人的uuid
+/// - Parameter userToken: 当前人的唯一标志
 /// - Returns: url
-@objc public func getMedicList(memberUuid: Int) -> String {
+@objc public func getMedicList(userToken: String) -> String {
 }
 ```
 
 病历详情
 
 ```
-    /// 获取病历详情
-    ///
-    /// - Parameters:
-    ///   - memberUuid: 当前人的uuid
-    ///   - medicId: 病历id
-    /// - Returns: url
-    @objc public func getMedicDetail(memberUuid: Int, medicId: String) -> String {
+/// 获取病历详情
+///
+/// - Parameters:
+///   - userToken: 当前人的唯一标志
+///   - medicId: 病历id
+/// - Returns: url
+@objc public func getMedicDetail(userToken: String, medicId: String) -> String {
     }
 ```
 
