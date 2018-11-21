@@ -27,8 +27,9 @@ class ScreenListVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let aVc = segue.destination as? WebBrowser {
             let isList = segue.identifier == "mediclist"
+            
             aVc.urlString = isList ? HHMSDK.default.getMedicList(userToken: testToken) : HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
-            print(aVc.urlString)
+            print(aVc.urlString ?? "")
         }
     }
     
