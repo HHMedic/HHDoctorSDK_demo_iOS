@@ -1,10 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-target 'HHMSDKDemo' do
   use_frameworks!
+
+target 'HHMSDKDemo' do
   pod 'SnapKit'
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git"
+
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
+
 end
 
 
