@@ -9,9 +9,8 @@
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [0. 更新日志](#0-更新日志)
       * [1. 集成方式](#1-集成方式)
-         * [1.1. 手动集成](#11-手动集成)
-         * [1.2. 自动集成（推荐）](#12-自动集成推荐)
-         * [1.3. 调用规则](#13-调用规则)
+         * [1.1. 自动集成](#12-自动集成推荐)
+         * [1.2. 调用规则](#13-调用规则)
       * [2. 初始化](#2-初始化)
       * [3. 登录账户](#3-登录账户)
          * [3.1. 登录](#31-登录)
@@ -62,26 +61,7 @@
 <string>应用需使用麦克风权限，以便您向医生进行视频咨询。</string>
 ```
 
-### 1.1. 手动集成
-
-1. 根据自己工程需要，下载对应版本的 HHMSDK，得到 NIMSDK.framework ，NIMAVChat.framework，NVS.framework，SecurityKit.framework 和 HHDoctorSDK.framework，以及未链接的全部三方依赖库 ，将他们导入工程。
-2. 添加其他 HHDoctorSDK 依赖库。
-
-    - SystemConfiguration.framework
-    - MobileCoreServices.framework
-    - AVFoundation.framwork
-    - CoreTelephony.framework
-    - CoreMedia.framework
-    - VideoToolbox.framework
-    - AudioToolbox.framework
-    - libz
-    - libsqlite3.0
-    - libc++
-3. 在 `Build Settings` -> `Other Linker Flags` 里，添加选项 `-ObjC`。
-4. 在 `Build Settings` -> `Enable Bitcode` 里，设置为 `No`。
-5. 如果需要在后台时保持音频通话状态，在 `Capabilities` -> `Background Modes` 里勾选 `audio, airplay, and Picture in Picture`。
-
-### 1.2. 自动集成（推荐）
+### 1.1. 自动集成
 * 在 `Podfile` 文件中加入
 
 ```shell
@@ -94,7 +74,7 @@ pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.g
 pod install
 ```
 
-### 1.3. 调用规则
+### 1.2. 调用规则
 所有 HHDoctorSDK 业务均通过 HHMSDK 单例调用
 
 ```swift
