@@ -36,6 +36,11 @@ class CallDelegateVC: UIViewController {
 
 
 extension CallDelegateVC: HHMVideoDelegate {
+    func receivedOrder(_ orderId: String) {
+        print("receivedOrder")
+        print(orderId)
+    }
+    
     func onExtensionDoctor() {
         print("转呼医生")
     }

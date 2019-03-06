@@ -21,6 +21,7 @@ class LoginVC: UIViewController {
             if let aError = $0 {
                 print("登录错误: " + aError.localizedDescription)
             } else {
+                print("登录成功")
                 self?.jump2main()
             }
         }
