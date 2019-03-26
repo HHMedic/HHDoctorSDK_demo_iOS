@@ -30,6 +30,13 @@
          
 ##  0. 更新日志
 
+```swift5
+swift5 请使用分支： feature/swift5
+  
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'feature/swift5'
+
+```
+
 > 2.0.6
 
 - 增加病历列表和病历详情接口
