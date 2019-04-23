@@ -70,7 +70,7 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
         view.addSubview(mProgress)
     
         mWebView.snp.makeConstraints({ (make) in
-            make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(self.view).inset(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         })
 
         navigationItem.rightBarButtonItem = nil
@@ -166,7 +166,7 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
     {
         guard navigationItem.rightBarButtonItem == nil else { return }
         let item = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(clickCloseBtn))
-        item.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)], for: .normal)
+        item.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
         navigationItem.rightBarButtonItem = item
     }
     
