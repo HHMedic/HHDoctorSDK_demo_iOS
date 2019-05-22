@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TZ-VX-dm1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TZ-VX-dm1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -104,9 +104,6 @@
                                                 <constraint firstItem="6kM-Rr-8VS" firstAttribute="centerX" secondItem="E5E-UA-9gt" secondAttribute="centerX" id="EJF-sA-8kI"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="AiO-3V-0vZ" kind="show" identifier="mediclist" id="lQ3-vM-oSx"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="8gO-7y-KOR">
                                         <rect key="frame" x="0.0" y="245" width="375" height="65"/>
@@ -142,9 +139,6 @@
                                                 <constraint firstItem="5GK-Mz-7TS" firstAttribute="centerY" secondItem="SIH-qj-Uaz" secondAttribute="centerY" id="kUc-sy-zca"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="AiO-3V-0vZ" kind="show" identifier="medicdetail" id="cB0-da-LwM"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -230,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="-556"/>
+            <point key="canvasLocation" x="2449" y="-679"/>
         </scene>
         <!--呼叫+代理-->
         <scene sceneID="CIc-eY-Rew">
@@ -304,26 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTZ-dX-Qo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="106"/>
-        </scene>
-        <!--Web Browser-->
-        <scene sceneID="Few-ki-HN8">
-            <objects>
-                <viewController id="AiO-3V-0vZ" customClass="WebBrowser" customModule="HHMSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ngJ-xn-dzZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="eYE-Hl-dGf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jhI-dr-Byx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="CUk-1m-hsm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ez-Up-7KR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1721" y="876"/>
+            <point key="canvasLocation" x="2450" y="60"/>
         </scene>
         <!--HHMSDK demo-->
         <scene sceneID="yTE-mS-AUH">
@@ -414,7 +389,4 @@
             <point key="canvasLocation" x="-1882.4000000000001" y="32.833583208395808"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cB0-da-LwM"/>
-    </inferredMetricsTieBreakers>
 </document>

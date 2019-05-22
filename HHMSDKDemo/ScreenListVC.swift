@@ -17,21 +17,21 @@ class ScreenListVC: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    @IBAction func doExit(_ sender: UIBarButtonItem) {
-        dismiss(animated: true) {
-            HHMSDK.default.logout()
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 { return }
+        
+        var url = ""
+        
+        if indexPath.row == 0 {
+            url = HHMSDK.default.getMedicList(userToken: testToken)
+        } else if indexPath.row == 1 {
+            url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
         }
         
+        let aVC = HHWebBrowser()
+        aVC.urlString = url
+        
+        self.navigationController?.pushViewController(aVC, animated: true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let aVc = segue.destination as? WebBrowser {
-            let isList = segue.identifier == "mediclist"
-            
-            aVc.urlString = isList ? HHMSDK.default.getMedicList(userToken: testToken) : HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
-            print(aVc.urlString ?? "")
-        }
-    }
-    
 
 }

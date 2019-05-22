@@ -11,7 +11,7 @@ import SnapKit
 import WebKit
 
 
-class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
+class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
 {
     let ob_progress = "estimatedProgress"
     let ob_title = "title"
@@ -44,17 +44,16 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
     }()
     
 
-    public init(URL: String, title: String = "")
-    {
-        self.urlString = URL
-        self.titleString = title
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required public init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
+//    public init(URL: String, title: String = "") {
+//        self.urlString = URL
+//        self.titleString = title
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required public init?(coder aDecoder: NSCoder)
+//    {
+//        super.init(coder: aDecoder)
+//    }
     
     override public func viewDidLoad()
     {
@@ -74,7 +73,9 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
         })
 
         navigationItem.rightBarButtonItem = nil
-        navigationItem.leftBarButtonItem = navigationItem.backBarButtonItem
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_app2"), style: .done, target: self, action: #selector(clickGoBackBtn))
+//        navigationItem.leftBarButtonItem?.target = self
+//        navigationItem.leftBarButtonItem?.action = #selector(clickGoBackBtn)
         
         settingWeb()
     }
@@ -87,7 +88,7 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
         mWebView.addObserver(self, forKeyPath: ob_title, options: .new, context: nil)
     }
 
-    func clickGoBackBtn() {
+    @objc func clickGoBackBtn() {
         guard mWebView.canGoBack else { clickCloseBtn(); return }
         mWebView.goBack()
     }
@@ -182,7 +183,7 @@ class WebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
     }
 }
 
-extension WebBrowser
+extension HHWebBrowser
 {
     fileprivate func bindTitle(_ change: [NSKeyValueChangeKey : Any]?)
     {

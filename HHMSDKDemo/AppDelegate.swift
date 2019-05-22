@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.registerForRemoteNotifications()
     }
     
-    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         HHMSDK.default.updateAPNS(token: deviceToken)
     }
