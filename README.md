@@ -1,11 +1,5 @@
 # HHDoctorSDK 接入说明
 
-<p align="right">
-北京和缓医疗科技有限公司<br/>
-网址：https://www.hh-medic.com <br/>
-地址：北京市东城区东直门来福士7层
-</p>
-
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [0. 更新日志](#0-更新日志)
       * [1. 集成方式](#1-集成方式)
@@ -98,10 +92,10 @@ HHSDKOptions 选项参数列表
 
 参数|类型|说明
 ------|---|--------
-productId|String|和缓分配的产品ID（必填）
+productId|String|视频医生提供方分配的产品ID（必填）
 isDevelopment|Bool|服务器模式（测试/正式）
 isDebug|Bool|调试模式(是否打印日志)
-APNs|String |推送证书名（由和缓生成）
+APNs|String |推送证书名（由视频医生提供方生成）
 hudManager| HHHUDable|自定义 progressHUD
 hudDisTime| Double|hud 自动消失时间
 
@@ -119,7 +113,7 @@ HHMSDK.default.start(option: option)
 
 
 ## 3. 登录账户
-在对医生视频呼叫之前，需要先登录账号信息。账号的 uuid 由和缓提供。
+在对医生视频呼叫之前，需要先登录账号信息。账号的 uuid 由视频医生提供方提供。
 ### 3.1. 登录
 
 *注意: 不能多次调用登录 SDK，否则会导致视频故障。*
@@ -151,7 +145,7 @@ HHMSDK.default.login(uuid: 100001531) { (error) in
 error 为登录错误信息，成功则为 nil。
 
 ### 3.2. 登出
-应用层登出/注销/切换自己的账号时需要调用 HHMSDK 的登出操作，该操作会通知和缓服务器进行 APNs 推送信息的解绑操作，避免用户已登出但推送依然发送到当前设备的情况发生。
+应用层登出/注销/切换自己的账号时需要调用 HHMSDK 的登出操作，该操作会通知视频医生提供方服务器进行 APNs 推送信息的解绑操作，避免用户已登出但推送依然发送到当前设备的情况发生。
 
 * 原型
 
