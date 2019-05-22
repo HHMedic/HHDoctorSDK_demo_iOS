@@ -1,23 +1,22 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 
-  use_frameworks!
+use_frameworks!
 
-target 'HHMSDKDemo' do
+# 带药 SDK demo
+target 'HHMedicineDemo' do
   pod 'SnapKit'
-
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
-
+  pod 'SVProgressHUD'
+  
+  pod 'AlipaySDK-iOS'
+  
+  pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git", :branch => 'develop'
 end
 
+# 和缓视频医生 SDK demo
+target 'HHMSDKDemo' do
+  pod 'SVProgressHUD'
+  pod 'SnapKit'
+  
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
 
-
-post_install do |installer_representation|
-  installer_representation.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-        config.build_settings['ENABLE_BITCODE'] = 'NO'
-        config.build_settings['SWIFT_VERSION'] = '4.2'
-
-    end
-  end
 end

@@ -27,8 +27,6 @@ class LoginVC: UIViewController {
         }
     }
     
-    
-    
     func jump2main() {
         performSegue(withIdentifier: "mainScreen", sender: self)
     }
