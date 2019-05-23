@@ -10,12 +10,10 @@ import UIKit
 import SnapKit
 import WebKit
 
+let ob_progress = "estimatedProgress"
+let ob_title = "title"
 
-class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
-{
-    let ob_progress = "estimatedProgress"
-    let ob_title = "title"
-    
+class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     /// 网页url
     var urlString: String? {
         didSet {
@@ -43,6 +41,9 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
         return webPV
     }()
     
+    private var navi: UINavigationController?
+    private var gesDelegate: UIGestureRecognizerDelegate?
+    
 
 //    public init(URL: String, title: String = "") {
 //        self.urlString = URL
@@ -61,10 +62,12 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
         
         initUI()
 //        loadUrl()
+        
+        self.navi = self.navigationController
+        self.gesDelegate = self.navigationController?.interactivePopGestureRecognizer?.delegate
     }
 
-    private func initUI()
-    {
+    private func initUI() {
         view.addSubview(mWebView)
         view.addSubview(mProgress)
     
@@ -78,6 +81,18 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate
 //        navigationItem.leftBarButtonItem?.action = #selector(clickGoBackBtn)
         
         settingWeb()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navi?.interactivePopGestureRecognizer?.delegate = nil
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navi?.interactivePopGestureRecognizer?.delegate = self.gesDelegate
     }
     
     fileprivate func settingWeb() {
