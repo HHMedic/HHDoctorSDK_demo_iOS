@@ -41,7 +41,62 @@ HHMedicine.default.start(option: config)
         return HHMedicine.default.handleOpen(url)
     }
     ```
+ 
+## Api 介绍
+ 
+ - 添加代理
+
+```Swift
+public func addDelegate(_ delegate: HHPayMedicable)
+```
+
+- 处理 openurl
+
+```Swift
+public func handleOpen(_ url: URL) -> Bool
+```
     
+- 获取订单列表控制器
+
+```Swift
+/// 获取订单列表控制器
+///
+/// - Parameter userToken: 用户唯一标志
+/// - Returns: 返回控制器
+public func orderList(_ userToken: String) -> UIViewController
+```
+
+- 获取订单详情控制器
+
+```Swift
+/// 获取订单详情控制器
+///
+/// - Parameters:
+///   - userToken: 用户唯一标志
+///   - orderId: 订单id
+///   - paySuccess: 支付成功回调(当前控制器，订单id)（关闭控制器等其他操作）
+/// - Returns: 返回控制器
+public func orderDetail(_ userToken: String, orderId: String, paySuccess: @escaping ((UIViewController, String) -> Void)) -> UIViewController
+```
+
+- 获取和豆明细控制器
+
+```Swift
+/// 获取和豆明细控制器
+///
+/// - Parameter userToken: 用户唯一标志
+/// - Returns: 返回控制器
+public func payDetail(_ userToken: String) -> UIViewController
+```
+
+- 获取地址列表控制器
+
+```Swift
+/// 获取地址列表控制器
+///
+/// - Returns: 返回控制器
+public func addressList() -> UIViewController
+```
 
 ## 注意事项
 
