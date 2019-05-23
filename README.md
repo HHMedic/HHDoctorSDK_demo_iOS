@@ -1,4 +1,6 @@
 # HHDoctorSDK 接入说明
+[带药 SDK 接入指南](./Documents/medicine.md)
+---
 
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [0. 更新日志](#0-更新日志)
@@ -20,16 +22,14 @@
          * [7.2. Background Modes](#62-background-modes)
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
-         * [swift 4.1](#swift-41)
-         
+      
+     
+      
+> HHDoctorSDK 的 demo 请切换到 Scheme 为 `HHMSDKDemo` 下编译。
+      
 ##  0. 更新日志
 
-```swift5
-swift5 请使用分支： feature/swift5
-  
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'feature/swift5'
-
-```
+- 仅支持 Swift5
 
 > 2.0.6
 
@@ -316,11 +316,3 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 ### 支付宝 SDK 冲突
 若出现UTDID冲突错误,请切换支付宝 SDK 到无UTDID版本.
 [官方说明](https://docs.open.alipay.com/54/104509/)
-
-
-### swift 4.1
-master 分支已经支持 swift4.2, 如果需要支持 swift4.1, 请切换到对应分支 `swift4.1`
-
-```
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'swift4.1'
-```
