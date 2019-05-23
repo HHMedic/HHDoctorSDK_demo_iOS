@@ -34,7 +34,7 @@ HHMedicine.default.start(option: config)
     
     在 project -> Info -> URL Types 下配置 scheme 为 `hh-medic.com`
     
-![URLScheme](./URLScheme.png)
+    ![URLScheme](./URLScheme.png)
     
 - 配置 openUrl
 
