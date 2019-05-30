@@ -43,6 +43,8 @@
 		8DDC581BA681F3017F965202 /* Pods_HHMedicineDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHMedicineDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E3CF4B615F9A33BC0C964F /* Pods-HHMedicineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHMedicineDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHMedicineDemo/Pods-HHMedicineDemo.release.xcconfig"; sourceTree = "<group>"; };
 		95030C4E2295293F00AD6290 /* MedicineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineHeader.h; sourceTree = "<group>"; };
+		95030D28229D2F8D00AD6290 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		95030D29229D2F8D00AD6290 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		952594812293906E00053058 /* HHWebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHWebBrowser.swift; sourceTree = "<group>"; };
 		9525949A229392B200053058 /* HHMedicineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHMedicineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9525949B229392B300053058 /* HHMedicine.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = HHMedicine.plist; path = /Users/shijian/Documents/H301/iOS_SDK/demos/HHDoctorSDK_demo_iOS/HHMedicine.plist; sourceTree = "<absolute>"; };
@@ -254,6 +256,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 95F31C3420D0F8C9000BDAC4;
 			productRefGroup = 95F31C3E20D0F8C9000BDAC4 /* Products */;
@@ -434,6 +437,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				95F31C4520D0F8C9000BDAC4 /* Base */,
+				95030D28229D2F8D00AD6290 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -442,6 +446,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				95F31C4A20D0F8CA000BDAC4 /* Base */,
+				95030D29229D2F8D00AD6290 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -565,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,51 @@
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "2kg-pY-iKv"; */
+"2kg-pY-iKv.normalTitle" = "登录";
+
+/* Class = "UIBarButtonItem"; title = "退出登录"; ObjectID = "4RM-f4-f9F"; */
+"4RM-f4-f9F.title" = "退出登录";
+
+/* Class = "UINavigationItem"; title = "选择功能"; ObjectID = "4yA-pt-Rni"; */
+"4yA-pt-Rni.title" = "选择功能";
+
+/* Class = "UILabel"; text = "病历详情"; ObjectID = "5GK-Mz-7TS"; */
+"5GK-Mz-7TS.text" = "病历详情";
+
+/* Class = "UILabel"; text = "病历列表"; ObjectID = "6kM-Rr-8VS"; */
+"6kM-Rr-8VS.text" = "病历列表";
+
+/* Class = "UILabel"; text = "呼叫 + 代理"; ObjectID = "B2q-aP-Gz6"; */
+"B2q-aP-Gz6.text" = "呼叫 + 代理";
+
+/* Class = "UIViewController"; title = "基础呼叫"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "基础呼叫";
+
+/* Class = "UITableViewSection"; headerTitle = "基础功能"; ObjectID = "CJa-GO-2lr"; */
+"CJa-GO-2lr.headerTitle" = "基础功能";
+
+/* Class = "UIViewController"; title = "呼叫+代理"; ObjectID = "Lgg-lI-rF9"; */
+"Lgg-lI-rF9.title" = "呼叫+代理";
+
+/* Class = "UIButton"; normalTitle = "成人"; ObjectID = "PcZ-Ef-iOf"; */
+"PcZ-Ef-iOf.normalTitle" = "成人";
+
+/* Class = "UINavigationItem"; title = "HHMSDK demo"; ObjectID = "Qyt-dy-OuG"; */
+"Qyt-dy-OuG.title" = "HHMSDK demo";
+
+/* Class = "UIButton"; normalTitle = "成人"; ObjectID = "cFf-AB-SPw"; */
+"cFf-AB-SPw.normalTitle" = "成人";
+
+/* Class = "UIButton"; normalTitle = "儿童"; ObjectID = "cKb-i3-JxQ"; */
+"cKb-i3-JxQ.normalTitle" = "儿童";
+
+/* Class = "UIViewController"; title = "HHMSDK demo"; ObjectID = "cO3-cq-YaO"; */
+"cO3-cq-YaO.title" = "HHMSDK demo";
+
+/* Class = "UIButton"; normalTitle = "儿童"; ObjectID = "iae-tc-tmZ"; */
+"iae-tc-tmZ.normalTitle" = "儿童";
+
+/* Class = "UITableViewSection"; headerTitle = "病历"; ObjectID = "nLB-DQ-UD2"; */
+"nLB-DQ-UD2.headerTitle" = "病历";
+
+/* Class = "UILabel"; text = "基础呼叫"; ObjectID = "rX9-H9-IL5"; */
+"rX9-H9-IL5.text" = "基础呼叫";

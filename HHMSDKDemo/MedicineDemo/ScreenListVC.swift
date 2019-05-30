@@ -14,13 +14,16 @@ import SVProgressHUD
 class ScreenListVC: UITableViewController {
     
     @IBOutlet weak var mTxtOrderId: UITextField!
+    @IBOutlet weak var mSDKOrderId: UITextField!
+    @IBOutlet weak var mMedicOrderId: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
         
-        HHMedicine.default.addDelegate(self)
+//        HHMedicine.default.addDelegate(self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -33,7 +36,11 @@ class ScreenListVC: UITableViewController {
             if indexPath.row == 0 {
                 url = HHMSDK.default.getMedicList(userToken: testToken)
             } else if indexPath.row == 1 {
-                url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
+                guard let aMedicId = mMedicOrderId.text, aMedicId.count > 0 else {
+                    SVProgressHUD.showError(withStatus: "请输入病历Id")
+                    return
+                }
+                url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: aMedicId)
             }
             
             let aVC = HHWebBrowser()
@@ -54,16 +61,13 @@ class ScreenListVC: UITableViewController {
             self.navigationController?.pushViewController(aVC, animated: true)
             
         case 1: // 订单详情
-            HHMedicine.default.alipayBlock = nil
-            orderDetail()
+            HHMedicine.default.removeDelegate()
+            orderDetail(mTxtOrderId.text)
             
         case 2:
-            HHMedicine.default.alipayBlock = {
-                return AlipaySDK.defaultService()?.payInterceptor(withUrl: $0, fromScheme: $1, callback: {
-                    HHMedicine.default.intercepterSuccess?($0)
-                }) ?? false
-            }
-            orderDetail()
+            HHMedicine.default.addDelegate(self)
+
+            orderDetail(mSDKOrderId.text)
             
         case 3: // 和豆明细
             let aVC = HHMedicine.default.payDetail(testToken)
@@ -84,8 +88,8 @@ class ScreenListVC: UITableViewController {
         
     }
     
-    func orderDetail() {
-        guard let aOrderId = mTxtOrderId.text, aOrderId.count > 0 else {
+    func orderDetail(_ text: String?) {
+        guard let aOrderId = text, aOrderId.count > 0 else {
             SVProgressHUD.showError(withStatus: "请输入订单Id")
             return
         }

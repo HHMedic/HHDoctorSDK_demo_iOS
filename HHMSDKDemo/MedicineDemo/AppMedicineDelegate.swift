@@ -25,10 +25,10 @@ class AppMedicineDelegate: UIResponder, UIApplicationDelegate {
         /// 初始化
         let option = HHSDKOptions(productId: "9001" ,isDebug: true, isDevelop: true)
         option.cerName = "2cDevTest"
-        HHMSDK.default.start(option: option)
+//        HHMSDK.default.start(option: option)
         
         /// 带药SDK初始化
-        HHMedicine.default.start()
+        HHMedicine.default.start(option: option)
 
     }
     

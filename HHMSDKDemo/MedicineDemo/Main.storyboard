@@ -113,7 +113,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="病历详情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pua-g1-g8C">
-                                                    <rect key="frame" x="157" y="17.5" width="100" height="30"/>
+                                                    <rect key="frame" x="20" y="17.5" width="100" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="6iu-lv-z0e"/>
                                                         <constraint firstAttribute="height" constant="30" id="Nhy-OA-fDQ"/>
@@ -133,10 +133,19 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入病历id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVj-Wx-MEd">
+                                                    <rect key="frame" x="140" y="17.5" width="214" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pua-g1-g8C" firstAttribute="centerX" secondItem="0H5-lL-Rde" secondAttribute="centerX" id="8Kv-wQ-LLx"/>
+                                                <constraint firstItem="zVj-Wx-MEd" firstAttribute="centerY" secondItem="0H5-lL-Rde" secondAttribute="centerY" id="4h6-Xg-LVM"/>
                                                 <constraint firstItem="Pua-g1-g8C" firstAttribute="centerY" secondItem="0H5-lL-Rde" secondAttribute="centerY" id="FcS-sT-lbc"/>
+                                                <constraint firstItem="Pua-g1-g8C" firstAttribute="leading" secondItem="0H5-lL-Rde" secondAttribute="leading" constant="20" id="Yfb-qm-NVz"/>
+                                                <constraint firstAttribute="trailing" secondItem="zVj-Wx-MEd" secondAttribute="trailing" constant="60" id="e3N-P8-Vf4"/>
+                                                <constraint firstItem="zVj-Wx-MEd" firstAttribute="leading" secondItem="Pua-g1-g8C" secondAttribute="trailing" constant="20" id="pTv-xX-nYQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -349,6 +358,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mMedicOrderId" destination="zVj-Wx-MEd" id="VMk-J2-iIx"/>
+                        <outlet property="mSDKOrderId" destination="4em-xj-NbM" id="dK1-nn-fRh"/>
                         <outlet property="mTxtOrderId" destination="Nql-zb-1kw" id="0eg-2B-MOg"/>
                     </connections>
                 </tableViewController>

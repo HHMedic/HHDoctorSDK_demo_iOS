@@ -9,7 +9,7 @@ target 'HHMedicineDemo' do
   
   pod 'AlipaySDK-iOS'
   
-  pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git", :branch => 'develop'
+  pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git"
 end
 
 # 和缓视频医生 SDK demo
