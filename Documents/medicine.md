@@ -1,6 +1,6 @@
 # 视频医生带药 SDK 接入说明
 
-带药 SDK 的demo请切换到 Scheme 为 `HHMedicineDemo` 下编译。
+带药 SDK 的 demo 请切换到 Scheme 为 `HHMedicineDemo` 下编译。
 
    * [视频医生带药 SDK 接入说明](#视频医生带药-sdk-接入说明)
       * [pod 集成方式](#pod-集成方式)
@@ -12,7 +12,7 @@
 
 ```shell
 use_frameworks!
-pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git", :branch => 'develop'
+pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git"
 ```
 
 ## 接入
@@ -22,9 +22,7 @@ pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.
 建议在 AppDelegate 中的 `didFinishLaunchingWithOptions` 方法下初始化 SDK
 
 ```
-let config = HHSDKOptions(productId: "3000")
-config.isDevelopment = isTest
-config.isDebug = true
+let option = HHSDKOptions(productId: "9001" ,isDebug: true, isDevelop: true)
 HHMedicine.default.start(option: config)
 ```
 

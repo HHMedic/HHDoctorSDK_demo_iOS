@@ -1,5 +1,6 @@
 # HHDoctorSDK 接入说明
-[带药 SDK 接入指南](./Documents/medicine.md)
+** [带药 SDK 接入指南](./Documents/medicine.md)
+---
 ---
 
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
