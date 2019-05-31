@@ -39,6 +39,7 @@ class LoginVC: UIViewController {
         HHMSDK.default.login(userToken: aToken) { [weak self] in
             if let aError = $0 {
                 print("登录错误: " + aError.localizedDescription)
+                SVProgressHUD.dismiss()
             } else {
                 print("登录成功")
                 SVProgressHUD.showSuccess(withStatus: "登录成功")

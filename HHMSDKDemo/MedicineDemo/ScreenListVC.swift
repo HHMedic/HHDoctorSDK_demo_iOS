@@ -13,17 +13,18 @@ import SVProgressHUD
 
 class ScreenListVC: UITableViewController {
     
+    @IBOutlet var mTableView: UITableView!
     @IBOutlet weak var mTxtOrderId: UITextField!
     @IBOutlet weak var mSDKOrderId: UITextField!
     @IBOutlet weak var mMedicOrderId: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.tableFooterView = UIView()
-        
-//        HHMedicine.default.addDelegate(self)
+    }
+
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

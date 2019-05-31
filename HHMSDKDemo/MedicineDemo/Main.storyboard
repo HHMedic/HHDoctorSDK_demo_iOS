@@ -133,7 +133,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入病历id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVj-Wx-MEd">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1559198060885" borderStyle="roundedRect" placeholder="请输入病历id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVj-Wx-MEd">
                                                     <rect key="frame" x="140" y="17.5" width="214" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -216,7 +216,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Y2019042915171759201" borderStyle="roundedRect" placeholder="订单Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-zb-1kw">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Y2019053014434215200" borderStyle="roundedRect" placeholder="订单Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-zb-1kw">
                                                     <rect key="frame" x="155" y="17.5" width="199" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -260,7 +260,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Y2019042915171759201" borderStyle="roundedRect" placeholder="订单Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4em-xj-NbM">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Y2019053014434215200" borderStyle="roundedRect" placeholder="订单Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4em-xj-NbM">
                                                     <rect key="frame" x="155" y="17.5" width="199" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -360,6 +360,7 @@
                     <connections>
                         <outlet property="mMedicOrderId" destination="zVj-Wx-MEd" id="VMk-J2-iIx"/>
                         <outlet property="mSDKOrderId" destination="4em-xj-NbM" id="dK1-nn-fRh"/>
+                        <outlet property="mTableView" destination="6Hv-Nw-L1y" id="sMG-WI-Edz"/>
                         <outlet property="mTxtOrderId" destination="Nql-zb-1kw" id="0eg-2B-MOg"/>
                     </connections>
                 </tableViewController>
@@ -563,7 +564,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="28EDBCB5CCA747460573FAC3BF6B637D3F0D04F68EA2608F6783B874E4F50EEF" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ftX-q6-gZj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="D68A2DBC99CD9289CD19886F16F9156F3F0D04F68EA2608F6783B874E4F50EEF" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ftX-q6-gZj">
                                 <rect key="frame" x="50" y="346" width="314" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

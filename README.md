@@ -1,8 +1,4 @@
 # HHDoctorSDK 接入说明
-** [带药 SDK 接入指南](./Documents/medicine.md)
----
----
-
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [0. 更新日志](#0-更新日志)
       * [1. 集成方式](#1-集成方式)
@@ -23,6 +19,7 @@
          * [7.2. Background Modes](#62-background-modes)
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
+      * [送药SDK](#送药SDK)
       
      
       
@@ -98,7 +95,7 @@ HHSDKOptions 选项参数列表
 
 参数|类型|说明
 ------|---|--------
-productId|String|视频医生提供方分配的产品ID（必填）
+sdkProductId|String|视频医生提供方分配的产品ID（必填）
 isDevelopment|Bool|服务器模式（测试/正式）
 isDebug|Bool|调试模式(是否打印日志)
 APNs|String |推送证书名（由视频医生提供方生成）
@@ -129,12 +126,12 @@ HHMSDK.default.start(option: option)
 ```swift
 public class HHMSDK : NSObject {
 
-    /// 登录账号
+    /// 登录账户
     ///
     /// - Parameters:
-    ///   - uuid: 用户的 唯一标志符
-    ///   - completion: 完成回调
-    public func login(uuid: Int, completion: @escaping HHMedicSDK.HHLoginHandler)
+    ///   - userToken: 用户的唯一标志
+    ///   - completion: 完成的回调
+    @objc  public func login(userToken: String, completion: @escaping HHLoginHandler) {
 }
 ```
 
@@ -142,9 +139,11 @@ public class HHMSDK : NSObject {
 
 ```swift
 // 登录
-HHMSDK.default.login(uuid: 100001531) { (error) in
-    if let aError = error {
+HHMSDK.default.login(userToken: "token") { [weak self] in
+    if let aError = $0 {
         print("登录错误: " + aError.localizedDescription)
+    } else {
+        print("登录成功")
     }
 }
 ```
@@ -322,3 +321,7 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 ### 支付宝 SDK 冲突
 若出现UTDID冲突错误,请切换支付宝 SDK 到无UTDID版本.
 [官方说明](https://docs.open.alipay.com/54/104509/)
+
+
+## 送药SDK
+[需要送药功能请查看此文档](./Documents/medicine.md)

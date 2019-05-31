@@ -9,10 +9,8 @@
 import UIKit
 import HHDoctorSDK
 
-
-public var testUUId = 100005580
-public var testToken = "ECEEDCCD74B7D54BCF6690B7E26262B73F0D04F68EA2608F6783B874E4F50EEF"
-public var testMedicId = "1541041785333"
+public var testToken = "D68A2DBC99CD9289CD19886F16F9156F3F0D04F68EA2608F6783B874E4F50EEF"
+public var testMedicId = "1559198060885"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
