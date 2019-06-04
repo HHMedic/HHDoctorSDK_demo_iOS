@@ -19,7 +19,7 @@
          * [7.2. Background Modes](#62-background-modes)
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
-         * [userToken 说明](#userToken 说明)
+         * [userToken 说明](#userToken-说明)
       * [送药SDK](#送药SDK)
       
      
