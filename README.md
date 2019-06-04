@@ -19,6 +19,7 @@
          * [7.2. Background Modes](#62-background-modes)
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
+         * [userToken 说明](#userToken 说明)
       * [送药SDK](#送药SDK)
       
      
@@ -322,6 +323,8 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 若出现UTDID冲突错误,请切换支付宝 SDK 到无UTDID版本.
 [官方说明](https://docs.open.alipay.com/54/104509/)
 
+### userToken 说明
+userToken由服务端对接生成，每个用户注册时都会返回uuid和对应的userToken，如果服务端之前没有记录这个字段，可以联系我们服务端同事帮忙重新生成。
 
 ## 送药SDK
 [需要送药功能请查看此文档](./Documents/medicine.md)
