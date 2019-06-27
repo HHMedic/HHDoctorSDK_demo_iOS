@@ -232,6 +232,15 @@ adult | 成人
     }
 ```
 
+```
+/// 获取所有成员的病历列表(推荐使用)
+    ///
+    /// - Parameter userToken: 主账户的唯一标志
+    /// - Returns: url
+    @objc public func getAllMedics(userToken: String) -> String {
+    }
+```
+
 ## 6. 代理(delegate)(可选)
 代理主要用于视频过程中的状态反馈。如果不需要状态反馈，可以不考虑该代理。
 所有的代理方法都是可选的，可以根据自己的实际需要实现不同的代理方法。
