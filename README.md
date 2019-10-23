@@ -328,6 +328,7 @@ userToken由服务端对接生成，每个用户注册时都会返回uuid和对�
 1. 运行前请先执行'pod update', 时间可能稍长，请耐心等待
 2. 请使用最新的 XCode 执行 'HHMSDKDemo.xcworkspace'
 3. 请选择`真机`进行调试, SDK 不支持模拟器运行
+4. 如果报错关于证书相关，请在 Sign & Capabilities中切换到自己的开发者账号，并修改 bundleid
 
 ## 送药SDK
 [需要送药功能请查看此文档](./Documents/medicine.md)
