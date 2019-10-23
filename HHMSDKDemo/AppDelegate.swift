@@ -9,7 +9,7 @@
 import UIKit
 import HHDoctorSDK
 
-public var testToken = "D68A2DBC99CD9289CD19886F16F9156F3F0D04F68EA2608F6783B874E4F50EEF"
+public var testToken = "D74BE61AD57E6AD4EFE09239C044905B3F0D04F68EA2608F6783B874E4F50EEF"
 public var testMedicId = "1559198060885"
 
 @UIApplicationMain
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.registerUserNotificationSettings(settings)
         UIApplication.shared.registerForRemoteNotifications()
     }
-    
+
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         HHMSDK.default.updateAPNS(token: deviceToken)
     }

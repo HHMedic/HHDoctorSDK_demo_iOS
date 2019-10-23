@@ -15,11 +15,12 @@ let ob_title = "title"
 
 class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     /// 网页url
-    var urlString: String? {
-        didSet {
-            loadUrl()
-        }
-    }
+    var urlString: String?
+//    {
+//        didSet {
+//            loadUrl()
+//        }
+//    }
     
     /// 网页名称
     var titleString: String?
@@ -28,7 +29,6 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     lazy var mWebView: WKWebView = {
         let configuretion = WKWebViewConfiguration()
         configuretion.preferences.javaScriptCanOpenWindowsAutomatically = true
-//        configuretion.preferences.javaScriptEnabled = true
         let wkView = WKWebView(frame: CGRect.zero , configuration: configuretion)
         
         return wkView
@@ -44,24 +44,23 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     private var navi: UINavigationController?
     private var gesDelegate: UIGestureRecognizerDelegate?
     
-
-//    public init(URL: String, title: String = "") {
-//        self.urlString = URL
-//        self.titleString = title
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required public init?(coder aDecoder: NSCoder)
-//    {
-//        super.init(coder: aDecoder)
-//    }
     
-    override public func viewDidLoad()
-    {
+    
+    init(_ URL: String, title: String = "") {
+        self.urlString = URL
+        self.titleString = title
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
-        
         initUI()
-//        loadUrl()
+        
+        print("122222")
         
         self.navi = self.navigationController
         self.gesDelegate = self.navigationController?.interactivePopGestureRecognizer?.delegate
@@ -81,17 +80,17 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
 //        navigationItem.leftBarButtonItem?.action = #selector(clickGoBackBtn)
         
         settingWeb()
+        
+        loadUrl()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navi?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         self.navi?.interactivePopGestureRecognizer?.delegate = self.gesDelegate
     }
     
@@ -137,16 +136,13 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
 
     // 此代理方法如果不实现，则不会实现网页跳转
-    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
-    {
-        if navigationAction.targetFrame == nil
-        {
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.targetFrame == nil {
             webView.load(navigationAction.request)
         }
         
         decisionHandler(.allow)
     }
-    
     
     public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void)
     {
@@ -162,32 +158,55 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
         present(alertC, animated: true, completion: nil)
     }
     
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        print("runJavaScriptConfirmPanelWithMessage")
+
+        let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "取消", style: .default, handler: { (_) in
+            completionHandler(false)
+        }))
+
+        alert.addAction(UIAlertAction(title: "确认", style: .default, handler: { (_) in
+            completionHandler(true)
+        }))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let alert = UIAlertController(title: prompt, message: "", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = defaultText
+        }
+        
+        alert.addAction(UIAlertAction(title: "完成", style: .default, handler: { (_) in
+            completionHandler(alert.textFields?.first?.text)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
-    {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.canGoBack ? addCloseItem() : delCloseItem()
     }
     
-    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
-    {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
 //        print("start")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("----------- something error")
         print(error.localizedDescription)
     }
     
-    
-    private func addCloseItem()
-    {
+    private func addCloseItem() {
         guard navigationItem.rightBarButtonItem == nil else { return }
         let item = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(clickCloseBtn))
         item.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
         navigationItem.rightBarButtonItem = item
     }
     
-    private func delCloseItem()
-    {
+    private func delCloseItem() {
         guard let _ = navigationItem.rightBarButtonItem else { return }
         navigationItem.rightBarButtonItem = nil
     }
@@ -198,10 +217,8 @@ class HHWebBrowser: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
 }
 
-extension HHWebBrowser
-{
-    fileprivate func bindTitle(_ change: [NSKeyValueChangeKey : Any]?)
-    {
+extension HHWebBrowser {
+    fileprivate func bindTitle(_ change: [NSKeyValueChangeKey : Any]?) {
         if !(titleString ?? "").isEmpty {
             title = titleString
         } else {
@@ -211,8 +228,7 @@ extension HHWebBrowser
         }
     }
     
-    fileprivate func updateProgress()
-    {
+    fileprivate func updateProgress() {
 //        print("progress: \(mWebView.estimatedProgress)")
         mProgress.isHidden = mWebView.estimatedProgress == 1
         mProgress.setProgress(Float((mWebView.estimatedProgress)), animated: true)

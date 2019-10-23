@@ -18,7 +18,6 @@
 		9525948E229392B200053058 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95844E302153A4E800D836F1 /* CoreMotion.framework */; };
 		95259491229392B200053058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F31C4920D0F8CA000BDAC4 /* LaunchScreen.storyboard */; };
 		95259492229392B200053058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F31C4720D0F8CA000BDAC4 /* Assets.xcassets */; };
-		95259494229392B200053058 /* calling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95F3B0B720FF2ABF00DAC928 /* calling.mp3 */; };
 		9525949F22939CD000053058 /* AppMedicineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525949E22939CD000053058 /* AppMedicineDelegate.swift */; };
 		952594A122939E5500053058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952594A022939E5500053058 /* Main.storyboard */; };
 		952594A322939F4B00053058 /* ScreenListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952594A222939F4B00053058 /* ScreenListVC.swift */; };
@@ -33,7 +32,6 @@
 		95F31C5320D20981000BDAC4 /* CallDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F31C5220D20980000BDAC4 /* CallDelegateVC.swift */; };
 		95F31C5520D24789000BDAC4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F31C5420D24789000BDAC4 /* LoginVC.swift */; };
 		95F31C5720D2485A000BDAC4 /* ScreenListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F31C5620D2485A000BDAC4 /* ScreenListVC.swift */; };
-		95F3B0B820FF2ABF00DAC928 /* calling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95F3B0B720FF2ABF00DAC928 /* calling.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +63,6 @@
 		95F31C5220D20980000BDAC4 /* CallDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDelegateVC.swift; sourceTree = "<group>"; };
 		95F31C5420D24789000BDAC4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		95F31C5620D2485A000BDAC4 /* ScreenListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenListVC.swift; sourceTree = "<group>"; };
-		95F3B0B720FF2ABF00DAC928 /* calling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = calling.mp3; sourceTree = "<group>"; };
 		B8EF2823F6F38130867DF23A /* Pods_HHMSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHMSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				952594812293906E00053058 /* HHWebBrowser.swift */,
-				95F3B0B720FF2ABF00DAC928 /* calling.mp3 */,
 				95CC5FCF20D8A64100310344 /* UIView+xib.swift */,
 			);
 			path = Utils;
@@ -276,7 +272,6 @@
 			files = (
 				95259491229392B200053058 /* LaunchScreen.storyboard in Resources */,
 				95259492229392B200053058 /* Assets.xcassets in Resources */,
-				95259494229392B200053058 /* calling.mp3 in Resources */,
 				952594A122939E5500053058 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +283,6 @@
 				95F31C4B20D0F8CA000BDAC4 /* LaunchScreen.storyboard in Resources */,
 				95F31C4820D0F8CA000BDAC4 /* Assets.xcassets in Resources */,
 				95F31C4620D0F8C9000BDAC4 /* Main.storyboard in Resources */,
-				95F3B0B820FF2ABF00DAC928 /* calling.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +460,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HHMedicine.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +486,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HHMedicine.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,12 +629,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/HHMSDKDemo/Res/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.hhdemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medicine.hhdemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -661,12 +655,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/HHMSDKDemo/Res/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medic.hhdemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hh-medicine.hhdemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;

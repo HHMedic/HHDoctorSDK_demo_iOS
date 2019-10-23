@@ -23,13 +23,15 @@ class ScreenListVC: UITableViewController {
         var url = ""
         
         if indexPath.row == 0 {
-            url = HHMSDK.default.getMedicList(userToken: testToken)
+            url = HHMSDK.default.getAllMedics(userToken: testToken)
+
+//            url = HHMSDK.default.getMedicList(userToken: testToken)
         } else if indexPath.row == 1 {
             url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
         }
         
-        let aVC = HHWebBrowser()
-        aVC.urlString = url
+        let aVC = HHWebBrowser(url)
+//        aVC.urlString = url
         
         self.navigationController?.pushViewController(aVC, animated: true)
     }

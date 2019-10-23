@@ -28,7 +28,7 @@ class AppMedicineDelegate: UIResponder, UIApplicationDelegate {
 //        HHMSDK.default.start(option: option)
         
         /// 带药SDK初始化
-        HHMedicine.default.start(option: option)
+        HHMSDK.default.start(option: option)
 
     }
     

@@ -20,6 +20,7 @@
       * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [userToken 说明](#userToken-说明)
+         * [demo 运行说明](#demo-运行说明)
       * [送药SDK](#送药SDK)
       
      
@@ -325,6 +326,12 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 
 ### userToken 说明
 userToken由服务端对接生成，每个用户注册时都会返回uuid和对应的userToken，如果服务端之前没有记录这个字段，可以联系我们服务端同事帮忙重新生成。
+
+### demo 运行说明
+
+1. 运行前请先执行'pod update', 时间可能稍长，请耐心等待
+2. 请使用最新的 XCode 执行 'HHMSDKDemo.xcworkspace'
+3. 请选择`真机`进行调试, SDK 不支持模拟器运行
 
 ## 送药SDK
 [需要送药功能请查看此文档](./Documents/medicine.md)

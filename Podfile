@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 use_frameworks!
 
@@ -9,7 +9,7 @@ target 'HHMedicineDemo' do
   
   pod 'AlipaySDK-iOS'
   
-  pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git"
+  pod 'HHMedicine', :git => "https://code.hh-medic.com/hh_public/HHMedicineSDK.ios.git", :branch => 'develop'
 end
 
 # 和缓视频医生 SDK demo
@@ -17,6 +17,6 @@ target 'HHMSDKDemo' do
   pod 'SVProgressHUD'
   pod 'SnapKit'
   
-  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
+  pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
 
 end

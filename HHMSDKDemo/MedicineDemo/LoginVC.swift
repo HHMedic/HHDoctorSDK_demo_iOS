@@ -24,7 +24,6 @@ class LoginVC: UIViewController {
         HHSDKOptions.default.isDevelopment = index == 0
     }
     
-    
     @IBAction func doLogin(_ sender: UIButton) {
         guard let aToken = mTextToken.text, aToken.count > 0 else {
             SVProgressHUD.showError(withStatus: "请输入 userToken")

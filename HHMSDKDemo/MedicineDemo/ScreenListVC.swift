@@ -35,7 +35,8 @@ class ScreenListVC: UITableViewController {
         // 病历相关
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                url = HHMSDK.default.getMedicList(userToken: testToken)
+                url = HHMSDK.default.getAllMedics(userToken: testToken)
+//                url = HHMSDK.default.getMedicList(userToken: testToken)
             } else if indexPath.row == 1 {
                 guard let aMedicId = mMedicOrderId.text, aMedicId.count > 0 else {
                     SVProgressHUD.showError(withStatus: "请输入病历Id")
@@ -44,8 +45,10 @@ class ScreenListVC: UITableViewController {
                 url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: aMedicId)
             }
             
-            let aVC = HHWebBrowser()
-            aVC.urlString = url
+            print(url)
+            
+            let aVC = HHWebBrowser(url)
+//            aVC.urlString = url
             
             self.navigationController?.pushViewController(aVC, animated: true)
             return
@@ -67,7 +70,6 @@ class ScreenListVC: UITableViewController {
             
         case 2:
             HHMedicine.default.addDelegate(self)
-
             orderDetail(mSDKOrderId.text)
             
         case 3: // 和豆明细
@@ -75,7 +77,7 @@ class ScreenListVC: UITableViewController {
             self.navigationController?.pushViewController(aVC, animated: true)
             
         case 4: // 地址列表
-            let aVC = HHMedicine.default.addressList()
+            let aVC = HHMedicine.default.addressList(testToken)
             self.navigationController?.pushViewController(aVC, animated: true)
             
         default:
