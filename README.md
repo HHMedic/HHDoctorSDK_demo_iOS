@@ -53,7 +53,6 @@
  HHDoctorSDK 提供两种集成方式：您既可以通过 CocoaPods 自动集成我们的 SDK，也可以通过手动下载 SDK, 然后添加到您的项目中。
 我们提供的下载地址：
 
- 我们提供了发布仓库: [HHDoctorSDK](https://code.hh-medic.com/hh_public/HHDoctorSDK.ios)。
  集成demo地址: [HHDoctorSDK_demo_iOS](https://github.com/HHMedic/HHDoctorSDK_demo_iOS)
 
 由于呼叫视频需要相机相册权限，需要在info.plist中添加对应的权限，否则会导致无法调用。
@@ -72,7 +71,7 @@
 
 ```shell
 use_frameworks!
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/hh_public/HHDoctorSDK.ios.git", :branch => 'no/utdid'
+pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
 ```
 * 安装
 
@@ -206,18 +205,15 @@ adult | 成人
 
 ## 5. 病历接口
 
-病历列表
-
-* 说明: 病历相关接口只返回URL, 由用户自己实现webView加载。
-* 参数: userToken, 由服务端对接产生
+获取所有成员的病历列表
 
 ```
-/// 获取病历列表
-///
-/// - Parameter userToken: 当前人的唯一标志
-/// - Returns: url
-@objc public func getMedicList(userToken: String) -> String {
-}
+/// 获取所有成员的病历列表(推荐使用)
+    ///
+    /// - Parameter userToken: 主账户的唯一标志
+    /// - Returns: url
+    @objc public func getAllMedics(userToken: String) -> String {
+    }
 ```
 
 病历详情

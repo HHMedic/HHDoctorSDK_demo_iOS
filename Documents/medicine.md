@@ -40,7 +40,7 @@ pod 'HHMedicine', :git => "http://code.hh-medic.com/hh_public/HHMedicineSDK.ios.
 
 ```
 let option = HHSDKOptions(productId: "9001" ,isDebug: true, isDevelop: true)
-HHMedicine.default.start(option: config)
+HHMSDK.default.start(option: config)
 ```
 
 ### 其他配置
@@ -117,8 +117,9 @@ public func payDetail(_ userToken: String) -> UIViewController
 ```Swift
 /// 获取地址列表控制器
 ///
+/// - Parameter userToken: 用户唯一标志
 /// - Returns: 返回控制器
-public func addressList() -> UIViewController
+public func addressList(_ userToken: String) -> UIViewController
 ```
 
 ## 注意事项
