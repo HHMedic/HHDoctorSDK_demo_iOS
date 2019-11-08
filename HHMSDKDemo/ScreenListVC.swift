@@ -36,4 +36,9 @@ class ScreenListVC: UITableViewController {
         self.navigationController?.pushViewController(aVC, animated: true)
     }
 
+    @IBAction func doExit(_ sender: UIBarButtonItem) {
+        HHMSDK.default.logout()
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 }

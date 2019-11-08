@@ -9,6 +9,8 @@ Pods/
 Podfile.lock
 fastlane/
 firim/
+Gemfile
+Gemfile.lock
 
 
 ## Various settings
