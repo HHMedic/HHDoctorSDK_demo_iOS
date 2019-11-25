@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerNotification()
         
         /// 初始化
-        let option = HHSDKOptions(sdkProductId: "9001" ,isDebug: true, isDevelop: true)
+        let option = HHSDKOptions(sdkProductId: "3000" ,isDebug: true, isDevelop: true)
         option.cerName = "2cDevTest"
         HHMSDK.default.start(option: option)
     }
