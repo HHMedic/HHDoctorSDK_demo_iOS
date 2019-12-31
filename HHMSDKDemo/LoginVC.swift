@@ -10,7 +10,6 @@ import UIKit
 import HHDoctorSDK
 
 class LoginVC: UIViewController {
-
     @IBOutlet weak var mTextInfo: UITextView!
     
     override func viewDidLoad() {
@@ -30,6 +29,9 @@ class LoginVC: UIViewController {
             return
         }
         
+        // 仅用于呼叫其他账户
+        tempToken = mTextInfo.text
+        
         // 登录
         HHMSDK.default.login(userToken: mTextInfo.text) { [weak self] in
             if let aError = $0 {
@@ -39,7 +41,6 @@ class LoginVC: UIViewController {
                 self?.jump2main()
             }
         }
-
     }
     
     @IBAction func doSwitchSeg(_ sender: UISegmentedControl) {
@@ -47,14 +48,11 @@ class LoginVC: UIViewController {
         let option = HHSDKOptions(sdkProductId: "3000" ,isDebug: true, isDevelop: isTest)
         option.cerName = "2cDevTest"
         HHMSDK.default.start(option: option)
-        
     }
     
     @IBAction func doLogout(_ sender: UIBarButtonItem) {
         HHMSDK.default.logout()
     }
-    
-    
     
     func jump2main() {
         performSegue(withIdentifier: "mainScreen", sender: self)

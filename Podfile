@@ -16,8 +16,6 @@ end
 target 'HHMSDKDemo' do
   pod 'SVProgressHUD'
   pod 'SnapKit'
-  
   pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
-#, :branch => 'develop'
 
 end

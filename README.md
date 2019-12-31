@@ -9,6 +9,8 @@
          * [3.1. 登录](#31-登录)
          * [3.2. 登出](#32-登出)
       * [4. 视频呼叫](#4-视频呼叫)
+         * [4.1 呼叫](#41-呼叫)
+         * [4.2 使用指定账户发起通话](#42-使用指定账户发起通话)
       * [5. 病历接口](#5-病历接口)
       * [6. 代理(delegate)(可选)](#5-代理delegate可选)
          * [6.1. 加入](#51-加入)
@@ -28,6 +30,9 @@
 > HHDoctorSDK 的 demo 请切换到 Scheme 为 `HHMSDKDemo` 下编译。
       
 ##  0. 更新日志
+
+> 2.4.4.2 (2019-12-31)
+    1. 新增 使用指定账户发起通话 ([4.2](#42-使用指定账户发起通话))
 
 > 2.4.4（2019-11-25）
     1. 优化排队功能(重要)
@@ -178,6 +183,8 @@ HHMSDK.default.logout()
 ## 4. 视频呼叫
 根据实际场景的不同，可以进行成人、儿童方向的向医生咨询。
 
+### 4.1 呼叫
+
 * 原型
 
 ```swift
@@ -198,6 +205,22 @@ HHMSDK.default.startCall(.child)
 
 // 咨询成人问题
 HHMSDK.default.startCall(.adult)
+```
+
+### 4.2 使用指定账户发起通话
+
+```Swift
+/// 使用指定账户发起通话
+/// - Parameter type: 呼叫类型
+/// - Parameter from: 当前呼叫使用的用户标识符(token)
+/// - Parameter delegate: 呼叫代理
+@objc public func startCallBy(_ from: String, type: HHDoctorSDK.HHCallType, delegate: HHDoctorSDK.HHCallDelegate? = nil)
+```
+  
+* 调用示例(请和商务确认好后再调用此接口)
+  
+```
+HHMSDK.default.startCallBy("token", type: .child)
 ```
 
 HHCallType 枚举列表

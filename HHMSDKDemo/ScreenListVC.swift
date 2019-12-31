@@ -19,21 +19,14 @@ class ScreenListVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 { return }
-        
         var url = ""
-        
         if indexPath.row == 0 {
             url = HHMSDK.default.getAllMedics(userToken: testToken)
-
-//            url = HHMSDK.default.getMedicList(userToken: testToken)
         } else if indexPath.row == 1 {
             url = HHMSDK.default.getMedicDetail(userToken: testToken, medicId: testMedicId)
         }
         
-        let aVC = HHWebBrowser(url)
-//        aVC.urlString = url
-        
-        self.navigationController?.pushViewController(aVC, animated: true)
+        self.navigationController?.pushViewController(HHWebBrowser(url), animated: true)
     }
 
     @IBAction func doExit(_ sender: UIBarButtonItem) {

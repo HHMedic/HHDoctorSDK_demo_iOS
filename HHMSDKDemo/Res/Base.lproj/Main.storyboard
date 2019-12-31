@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TZ-VX-dm1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TZ-VX-dm1">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +25,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基础呼叫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-H9-IL5">
-                                                    <rect key="frame" x="153" y="17" width="69.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="呼叫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-H9-IL5">
+                                                    <rect key="frame" x="170" y="17" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="32.833583208395808"/>
         </scene>
-        <!--基础呼叫-->
+        <!--呼叫-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="基础呼叫" id="BYZ-38-t0r" customClass="NormalCallVC" customModule="HHMSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="呼叫" id="BYZ-38-t0r" customClass="NormalCallVC" customModule="HHMSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xEk-E7-aaQ"/>
                         <viewControllerLayoutGuide type="bottom" id="XRQ-OX-EvK"/>
@@ -212,13 +212,69 @@
                                     <constraint firstItem="PcZ-Ef-iOf" firstAttribute="width" secondItem="cKb-i3-JxQ" secondAttribute="width" id="pTt-gL-h5i"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vP-qy-NT3">
+                                <rect key="frame" x="187.5" y="622" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Br1-Oh-4UD">
+                                <rect key="frame" x="66" y="229" width="243" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zbw-Ev-SeA"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-g9-qKz">
+                                <rect key="frame" x="112.5" y="451" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.50980392159999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="I5E-d4-y4L"/>
+                                    <constraint firstAttribute="height" constant="45" id="q8i-PJ-fmQ"/>
+                                </constraints>
+                                <state key="normal" title="子账户呼叫"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doCallForOther:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIj-MZ-V6a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4Gd-PI-lxi" firstAttribute="top" secondItem="xEk-E7-aaQ" secondAttribute="bottom" constant="100" id="88p-y1-1wD"/>
+                            <constraint firstItem="4ec-g9-qKz" firstAttribute="top" secondItem="Br1-Oh-4UD" secondAttribute="bottom" constant="22" id="BPJ-1X-dmz"/>
+                            <constraint firstItem="Br1-Oh-4UD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="C1N-Nj-39a"/>
+                            <constraint firstItem="4ec-g9-qKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C4F-4o-XOb"/>
+                            <constraint firstItem="XRQ-OX-EvK" firstAttribute="top" secondItem="1vP-qy-NT3" secondAttribute="bottom" constant="45" id="EOH-sN-HCW"/>
+                            <constraint firstItem="1vP-qy-NT3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OEF-9T-wb6"/>
+                            <constraint firstItem="Br1-Oh-4UD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PwI-Lp-5zk"/>
+                            <constraint firstItem="Br1-Oh-4UD" firstAttribute="top" secondItem="4Gd-PI-lxi" secondAttribute="bottom" constant="45" id="eK1-bD-5y9"/>
+                            <constraint firstItem="4ec-g9-qKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f04-yF-DBv"/>
                             <constraint firstItem="4Gd-PI-lxi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x4Y-kA-uGH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mInfoLbl" destination="1vP-qy-NT3" id="HHM-uw-eUB"/>
+                        <outlet property="mTokenLbl" destination="Br1-Oh-4UD" id="X9n-Xb-22E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
