@@ -15,32 +15,45 @@ class NormalCallVC: UIViewController {
     @IBOutlet weak var mInfoLbl: UILabel!
     @IBOutlet weak var mTokenLbl: UITextView!
     
+    @IBOutlet weak var mSubUuid: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // 儿童
     @IBAction func callForChild(_ sender: UIButton) {
-//        HHMSDK.default.startCall(.child)
+        HHMSDK.default.startCall(.child)
         
-        HHMSDK.default.login(userToken: tempToken) {
-            if $0 == nil {
-                HHMSDK.default.startCall(.child)
-            }
-        }
+//        HHMSDK.default.login(userToken: tempToken) {
+//            if $0 == nil {
+//                HHMSDK.default.startCall(.child)
+//            }
+//        }
     }
     
     // 成人
     @IBAction func callForAdult(_ sender: UIButton) {
-//        HHMSDK.default.startCall(.adult)
+        HHMSDK.default.startCall(.adult)
         
-        HHMSDK.default.login(userToken: tempToken) {
-            if $0 == nil {
-                HHMSDK.default.startCall(.adult)
-            }
+//        HHMSDK.default.login(userToken: tempToken) {
+//            if $0 == nil {
+//                HHMSDK.default.startCall(.adult)
+//            }
+//        }
+    }
+    
+    @IBAction func doCallSubMember(_ sender: UIButton) {
+        if let aUuid = mSubUuid.text, let uuid = Int(aUuid) {
+            HHMSDK.default.startNewCall(uuid)
+            
+        } else {
+            mInfoLbl.text = "请输入子账户 uuid"
         }
     }
     
+        
     // 呼叫其他人
     @IBAction func doCallForOther(_ sender: UIButton) {
         if let aToken = mTokenLbl.text, aToken.count > 0 {
