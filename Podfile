@@ -17,5 +17,8 @@ target 'HHMSDKDemo' do
   pod 'SVProgressHUD'
   pod 'SnapKit'
   pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
+  
+  #如果使用XCode 11.4.1及以上版本请使用以下版本引用
+  #pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
 
 end
