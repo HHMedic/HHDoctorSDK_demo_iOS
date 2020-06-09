@@ -90,6 +90,9 @@
 ```shell
 use_frameworks!
 pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
+
+#如果使用Xcode 11.4.1及以上版本请先使用如下SDK的引用方式
+pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
 ```
 * 安装
 
