@@ -92,7 +92,7 @@ use_frameworks!
 pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
 
 #如果使用Xcode 11.4.1及以上版本请先使用如下SDK的引用方式
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git'
+pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
 ```
 * 安装
 
@@ -361,7 +361,7 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 userToken由服务端对接生成，每个用户注册时都会返回uuid和对应的userToken，如果服务端之前没有记录这个字段，可以联系我们服务端同事帮忙重新生成。
 
 ### 如果使用Xcode 11.4.1及以上版本请先使用如下SDK的引用方式
-pod 'HHDoctorSDK', :git => "git@code.hh-medic.com:shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
+pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
 
 ### demo 运行说明
 
