@@ -360,9 +360,6 @@ xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Pic
 ### userToken 说明
 userToken由服务端对接生成，每个用户注册时都会返回uuid和对应的userToken，如果服务端之前没有记录这个字段，可以联系我们服务端同事帮忙重新生成。
 
-### 如果使用Xcode 11.4.1及以上版本请先使用如下SDK的引用方式
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
-
 ### demo 运行说明
 
 1. 运行前请先执行'pod update', 时间可能稍长，请耐心等待
