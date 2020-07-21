@@ -31,6 +31,11 @@
       
 ##  0. 更新日志
 
+> 2.6.2 (2020-07-21)
+
+    1. 增加多人呼叫支持
+
+
 > 2.6.0 (2020-03-01)
 
     1. 内部逻辑优化
@@ -240,6 +245,31 @@ child | 儿童
 adult | 成人
 
 
+### 4.3 多人呼叫
+
+
+```Swift
+/// 主动发起多人通话
+///
+/// - Parameters:
+///   - type: 呼叫类型
+///   - callee: 被呼叫人的信息
+@objc public func startTeamCall(_ type: HHDoctorSDK.HHCallType, callee: HHDoctorSDK.HHCallerInfo)
+```
+
+* 调用示例
+  
+```
+let callee = HHCallerInfo()
+callee.name = "测试用户"
+callee.photourl = "https://image.hh-medic.com/icon/head_logo1.png"
+callee.userToken = userToken
+
+HHMSDK.default.startTeamCall(.adult, callee: callee)
+```
+
+
+
 ## 5. 病历接口
 
 获取所有成员的病历列表
@@ -349,6 +379,8 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 ```
 xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
 ```
+
+
 
 
 ## 问题说明
