@@ -11,6 +11,7 @@
       * [4. 视频呼叫](#4-视频呼叫)
          * [4.1 呼叫](#41-呼叫)
          * [4.2 使用指定账户发起通话](#42-使用指定账户发起通话)
+         * [4.3 多人通话](#43-使用指定账户发起多人通话)
       * [5. 病历接口](#5-病历接口)
       * [6. 代理(delegate)(可选)](#5-代理delegate可选)
          * [6.1. 加入](#51-加入)
@@ -95,9 +96,6 @@
 ```shell
 use_frameworks!
 pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
-
-#如果使用Xcode 11.4.1及以上版本请先使用如下SDK的引用方式
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git",:branch => 'feature/swift5.2'
 ```
 * 安装
 
