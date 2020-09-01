@@ -32,6 +32,15 @@
       
 ##  0. 更新日志
 
+> 3.0.0 (2020-09-01)
+
+    1. 新增选成员呼叫功能
+  2.增加上传照片的信息回调
+  3.新增信息流页面、个人信息页面、设置页面
+  4.新增 ‘增加家庭成员’、‘多人呼叫’的开关配置
+  5.新增呼叫视频中上传照片信息的回调
+
+
 > 2.6.2 (2020-07-21)
 
     1. 增加多人呼叫支持
@@ -136,6 +145,9 @@ option.cerName = "2cDevTest"
 // option.isDevelopment = true
 // option.isDebug = true
 // option.hudDisTime = 2
+// option.allowAddMember = true
+// option.allowMulti = true
+// option.videoUploadImgCallback = {(orderId,imgs) in  }
 HHMSDK.default.start(option: option)
 ```
 
@@ -267,6 +279,17 @@ HHMSDK.default.startTeamCall(.adult, callee: callee)
 ```
 
 
+### 4.4 选人呼叫
+
+```Swift
+/// 选人呼叫
+///
+/// - Parameters:
+/// - needSelectMember :是否需要选人，默认需要
+
+@objc public func startMemberCall(needSelectMember : Bool = true)
+```
+
 
 ## 5. 病历接口
 
@@ -356,9 +379,18 @@ HHMSDK.default.remove(delegate: self)
 ```
 
 
-## 7. 其他配置
+### 7.信息流
 
-### 7.1. APNs
+```swift
+HHMSDK.default.skipChatHome()
+```
+
+
+
+
+## 8. 其他配置
+
+### 8.1. APNs
 
 在 appDelegate 中向 SDK 传入 deviceToken 即可。
 
@@ -370,13 +402,15 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 *注意：需要上传 APNs 的 p12 文件，请联系我们上传。*
 
-### 7.2. Background Modes
+### 8.2. Background Modes
 
 为了支持用户压后台后音视频的正常使用，需要设置 Background Modes。具体设置如下：
 
 ```
 xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
 ```
+
+
 
 
 
