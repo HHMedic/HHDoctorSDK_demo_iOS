@@ -1,32 +1,41 @@
 # HHDoctorSDK 接入说明
    * [HHDoctorSDK 接入说明](#hhdoctorsdk-接入说明)
       * [0. 更新日志](#0-更新日志)
-      * [1. 集成方式](#1-集成方式)
+      
+    * [1. 集成方式](#1-集成方式)
          * [1.1. 自动集成](#12-自动集成推荐)
          * [1.2. 调用规则](#13-调用规则)
-      * [2. 初始化](#2-初始化)
-      * [3. 登录账户](#3-登录账户)
+      
+    * [2. 初始化](#2-初始化)
+      
+    * [3. 登录账户](#3-登录账户)
          * [3.1. 登录](#31-登录)
          * [3.2. 登出](#32-登出)
-      * [4. 视频呼叫](#4-视频呼叫)
+      
+    * [4. 视频呼叫](#4-视频呼叫)
          * [4.1 呼叫](#41-呼叫)
          * [4.2 使用指定账户发起通话](#42-使用指定账户发起通话)
          * [4.3 多人通话](#43-多人呼叫)
-      * [5. 病历接口](#5-病历接口)
-      * [6. 代理(delegate)(可选)](#5-代理delegate可选)
+         * [4.4 选人呼叫](#44-选人呼叫)
+      
+    * [5. 病历接口](#5-病历接口)
+      
+    * [6. 代理(delegate)(可选)](#5-代理delegate可选)
          * [6.1. 加入](#51-加入)
          * [6.2. 移除](#52-移除)
-      
-      * [7. 其他配置](#6-其他配置)
-         * [7.1. APNs](#61-apns)
-         * [7.2. Background Modes](#62-background-modes)
-      * [问题说明](#问题说明)
+
+    * [7. 信息流](#7-信息流)
+    
+    * [8. 其他配置说明](#8-其他配置)
+         * [8.1. APNs](#81-apns)
+         * [8.2. Background Modes](#82-background-modes)
+     
+   * [问题说明](#问题说明)
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [userToken 说明](#userToken-说明)
          * [demo 运行说明](#demo-运行说明)
       * [送药SDK](#送药SDK)
-      
-     
+        
       
 > HHDoctorSDK 的 demo 请切换到 Scheme 为 `HHMSDKDemo` 下编译。
       
@@ -409,9 +418,6 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 ```
 xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
 ```
-
-
-
 
 
 
