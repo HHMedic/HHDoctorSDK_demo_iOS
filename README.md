@@ -291,6 +291,8 @@ HHMSDK.default.startTeamCall(.adult, callee: callee)
 @objc public func startMemberCall(needSelectMember : Bool = true)
 ```
 
+备注：选人呼叫功能提供了 “多人呼叫” 和 “增加成员”的配置。通过可通过Demo查看，其中“多人呼叫”配置只对信息流首页的选人呼叫功能起作用，并且，当配置了“多人呼叫”功能，“增加成员”配置自动设置为关闭。
+
 
 ## 5. 病历接口
 
