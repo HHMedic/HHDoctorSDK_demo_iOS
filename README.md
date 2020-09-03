@@ -25,7 +25,7 @@
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [userToken 说明](#userToken-说明)
          * [demo 运行说明](#demo-运行说明)
-         * [iOS14 适配](#iOS 14适配)
+         * [iOS14适配](#iOS14适配)
          * [模拟器视频](#模拟器适配)
       * [送药SDK](#送药SDK)
       
