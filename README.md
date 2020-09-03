@@ -25,6 +25,8 @@
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [userToken 说明](#userToken-说明)
          * [demo 运行说明](#demo-运行说明)
+         * [iOS 14 适配](#iOS 14适配)
+         * [模拟器视频](#模拟器适配)
       * [送药SDK](#送药SDK)
       
      
@@ -433,6 +435,24 @@ userToken由服务端对接生成，每个用户注册时都会返回uuid和对�
 2. 请使用最新的 XCode 执行 'HHMSDKDemo.xcworkspace'
 3. 请选择`真机`进行调试, SDK 不支持模拟器运行
 4. 如果报错关于证书相关，请在 Sign & Capabilities中切换到自己的开发者账号，并修改 bundleid
+
+### iOS 14适配
+如需适配iOS 14，需在 `Podfile` 文件中加
+
+```shell
+use_frameworks!
+pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git", :branch => 'feature/iOS14'
+```
+
+###模拟器适配
+
+如需在模拟器上运行的话，请集成模拟器分支
+
+```shell
+use_frameworks!
+pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git", :branch => 'feature/simulator'
+```
+
 
 ## 送药SDK
 [需要送药功能请查看此文档](./Documents/medicine.md)
