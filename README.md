@@ -29,20 +29,19 @@
          * [模拟器视频](#模拟器适配)
       * [送药SDK](#送药SDK)
       
-     
+          
       
 > HHDoctorSDK 的 demo 请切换到 Scheme 为 `HHMSDKDemo` 下编译。
-      
+
 ##  0. 更新日志
 
 > 3.0.0 (2020-09-01)
 
     1. 新增选成员呼叫功能
-  2.增加上传照片的信息回调
-  3.新增信息流页面、个人信息页面、设置页面
-  4.新增 ‘增加家庭成员’、‘多人呼叫’的开关配置
-  5.新增呼叫视频中上传照片信息的回调
-
+    2.增加上传照片的信息回调
+    3.新增信息流页面、个人信息页面、设置页面
+    4.新增 ‘增加家庭成员’、‘多人呼叫’的开关配置
+    5.新增呼叫视频中上传照片信息的回调
 
 > 2.6.2 (2020-07-21)
 
@@ -68,7 +67,7 @@
 > 2.1.0（2019-05-30）
 
     1. 修复已知问题
-    
+
 
 
 > 2.0.6
@@ -81,7 +80,7 @@
 > 2.0.2
 
      1. 适配 Xcode 10, swift4.2
- 
+
 
 ## 1. 集成方式
 
@@ -138,6 +137,7 @@ isDebug|Bool|调试模式(是否打印日志)
 APNs|String |推送证书名（由视频医生提供方生成）
 hudManager| HHHUDable|自定义 progressHUD
 hudDisTime| Double|hud 自动消失时间
+messageTitle| String |信息流标题<默认显示"视频医生">
 
 调用示例
 
@@ -150,6 +150,7 @@ option.cerName = "2cDevTest"
 // option.hudDisTime = 2
 // option.allowAddMember = true
 // option.allowMulti = true
+// option.messageTitle = "信息流标题"
 // option.videoUploadImgCallback = {(orderId,imgs) in  }
 HHMSDK.default.start(option: option)
 ```
@@ -243,7 +244,7 @@ HHMSDK.default.startCall(.adult)
 /// - Parameter delegate: 呼叫代理
 @objc public func startCallBy(_ from: String, type: HHDoctorSDK.HHCallType, delegate: HHDoctorSDK.HHCallDelegate? = nil)
 ```
-  
+
 * 调用示例(请和商务确认好后再调用此接口)
   
 ```
@@ -390,7 +391,7 @@ HHMSDK.default.remove(delegate: self)
 HHMSDK.default.skipChatHome()
 ```
 
-
+说明：信息流页面标题可通过SDK初始化时传入，具体参照<初始化>说明
 
 
 ## 8. 其他配置
