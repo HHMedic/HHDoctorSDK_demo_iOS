@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6AF58710F6F4704A0DDB54DA /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		6AF58710F6F4704A0DDB54DA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		7E104C5924FF3EB900E4BE7B /* SelectMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E104C5824FF3EB900E4BE7B /* SelectMemberVC.swift */; };
 		7EF688E724C68ACF00D43329 /* MultiCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF688E624C68ACF00D43329 /* MultiCallVC.swift */; };
 		8CDC226071D1655432DC3BCC /* Pods_HHMSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EF2823F6F38130867DF23A /* Pods_HHMSDKDemo.framework */; };
@@ -80,7 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95844E312153A4E800D836F1 /* CoreMotion.framework in Frameworks */,
-				6AF58710F6F4704A0DDB54DA /* (null) in Frameworks */,
+				6AF58710F6F4704A0DDB54DA /* BuildFile in Frameworks */,
 				8CDC226071D1655432DC3BCC /* Pods_HHMSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +205,7 @@
 				95F31C3A20D0F8C9000BDAC4 /* Frameworks */,
 				95F31C3B20D0F8C9000BDAC4 /* Resources */,
 				189548F35CB86E4B07F3E006 /* [CP] Embed Pods Frameworks */,
-				F3D47A121E9490C2588548A2 /* [CP] Copy Pods Resources */,
+				94C0E2CA6C5C47F8F2BC8480 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,7 +319,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3D47A121E9490C2588548A2 /* [CP] Copy Pods Resources */ = {
+		94C0E2CA6C5C47F8F2BC8480 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
