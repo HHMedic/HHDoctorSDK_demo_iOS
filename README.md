@@ -25,7 +25,7 @@
          * [支付宝 SDK 冲突](#支付宝-sdk-冲突)
          * [userToken 说明](#userToken-说明)
          * [demo 运行说明](#demo-运行说明)
-         * [iOS14适配](#iOS14适配)
+         * [老版本适配](#老版本适配)
          * [模拟器视频](#模拟器适配)
       * [送药SDK](#送药SDK)
       
@@ -35,7 +35,13 @@
 
 ##  0. 更新日志
 
+> 3.0.6 (2020-10-28)
 
+    1.新增‘档案库’、‘激活码激活’入口的配置化参数，具体参照下文中的初始化示例代码
+    2.新增iOS14相册图片选择的适配，具体参照下文中的 ‘其他配置 - iOS14相册选择适配’
+
+
+​	
 
 > 3.0.2 (2020-09-22)
 
@@ -160,6 +166,8 @@ option.cerName = "2cDevTest"
 // option.hudDisTime = 2
 // option.allowAddMember = true
 // option.allowMulti = true
+// config.enableMedical = false /// 是否显示档案库入口，默认为true
+// config.enableActivate = false /// 是否显示激活码激活入口，默认为true
 // option.messageTitle = "信息流标题"
 // option.videoUploadImgCallback = {(orderId,imgs) in  }
 HHMSDK.default.start(option: option)
@@ -426,6 +434,9 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 xxx target -> Capabilities -> Background Modes -> 勾选 Audio，Airplay and Picture in Picture
 ```
 
+### 8.3. iOS14图片选择适配
+
+为了适配iOS14的limit photo select，SDK做了用户选择提示窗处理，开发者需在项目的target info.plist 新增Key ‘Prevent limited photos access alert’  Value : YES
 
 
 
@@ -447,8 +458,8 @@ userToken由服务端对接生成，每个用户注册时都会返回uuid和对�
 3. 请选择`真机`进行调试, SDK 不支持模拟器运行
 4. 如果报错关于证书相关，请在 Sign & Capabilities中切换到自己的开发者账号，并修改 bundleid
 
-### iOS 14适配
-如需适配iOS 14，需在 `Podfile` 文件中加
+### 老版本适配
+如需适配老版本，需在 `Podfile` 可使用之前版本的Tag
 
 ```shell
 use_frameworks!

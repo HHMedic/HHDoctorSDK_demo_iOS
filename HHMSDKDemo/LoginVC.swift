@@ -33,12 +33,14 @@ class LoginVC: UIViewController {
         tempToken = mTextInfo.text
         
         // 登录
-        HHMSDK.default.login(userToken: mTextInfo.text) { [weak self] in
+        HHMSDK.default.login(userToken: "8F0DFBBE06279719F22C792802AC0205BB7A1F1299CAF508460D59212594CED3") { [weak self] in
             if let aError = $0 {
                 print("登录错误: " + aError.localizedDescription)
             } else {
                 print("登录成功")
                 self?.jump2main()
+                
+                HHMSDK.default.skipChatHome()
             }
         }
     }
