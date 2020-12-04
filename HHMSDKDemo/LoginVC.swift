@@ -17,18 +17,6 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func doLogin(_ sender: UIButton) {
-        if let aUuid = Int(mTextInfo.text) {
-            HHMSDK.default.login(uuid: aUuid) { [weak self] in
-                if let aError = $0 {
-                    print("登录错误: " + aError.localizedDescription)
-                } else {
-                    print("登录成功")
-                    self?.jump2main()
-                }
-            }
-            return
-        }
-        
         // 仅用于呼叫其他账户
         tempToken = mTextInfo.text
         

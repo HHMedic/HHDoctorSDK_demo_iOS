@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerNotification()
         
         /// 初始化
-        let option = HHSDKOptions(sdkProductId: "3000" ,isDebug: true, isDevelop: true)
+        let option = HHSDKOptions(sdkProductId: "10248" ,isDebug: true, isDevelop: true)
         option.cerName = "2cDevTest"
         option.messageTitle = "和缓视频医生"
         HHMSDK.default.start(option: option)
