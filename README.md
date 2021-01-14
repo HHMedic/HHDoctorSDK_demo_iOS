@@ -33,6 +33,10 @@
       
 > HHDoctorSDK 的 demo 请切换到 Scheme 为 `HHMSDKDemo` 下编译。
 
+
+[SDK 常见问题及解决方案](./Documents/qa.md)
+
+
 ##  0. 更新日志
 
 
