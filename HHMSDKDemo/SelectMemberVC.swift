@@ -19,22 +19,22 @@ class SelectMemberVC: UIViewController {
     
     override func viewDidLoad() {
         
-        mMuiltiSwitch.isOn = HHSDKOptions.default.allowMulti
-        
-        mAddMemberSwitch.isOn = HHSDKOptions.default.allowAddMember
+//        mMuiltiSwitch.isOn = HHSDKOptions.default.allowMulti
+//
+//        mAddMemberSwitch.isOn = HHSDKOptions.default.allowAddMember
         
     }
     
     @IBAction func onChangeMulti(_ sender : UISwitch){
         
-        HHSDKOptions.default.allowMulti = sender.isOn
+//        HHSDKOptions.default.allowMulti = sender.isOn
         
         
     }
     
     @IBAction func onAddMember(_ sender : UISwitch){
         
-        HHSDKOptions.default.allowAddMember = sender.isOn
+//        HHSDKOptions.default.allowAddMember = sender.isOn
     }
 
     @IBAction func doSelectMemberForCall(){
