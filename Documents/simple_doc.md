@@ -55,4 +55,4 @@ HHMSDK.default.skipChatHome()
 
 ### 五：Demo及详细文档：
 
-https://github.com/HHMedic/HHDoctorSDK_demo_iOS
+https://code.hh-medic.com/hh_public/HHVDoctorSDK-Demo/tree/master
