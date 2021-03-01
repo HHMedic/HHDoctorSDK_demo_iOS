@@ -9,7 +9,7 @@
 ```
 #在 Podfile 文件中加入
 use_frameworks!
-pod 'HHDoctorSDK', :git => "http://code.hh-medic.com/shijian/HHDoctorSDK.ios.open.git"
+pod 'HHVDoctorSDK', :git => "http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git"
 
 #执行
 pod install
